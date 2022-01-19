@@ -1,0 +1,39 @@
+.nav_text-style {
+  color: rgb(255, 255, 255);
+  font-family: Fester_Bold;
+  font-size: 20px;
+}
+
+.search-bar_text-style {
+  color: white;
+  font-family: text-regular;
+  font-size: 17px;
+}
+
+.home--title--item {
+  color: rgb(255, 255, 255);
+  font-family: Fester_Bold;
+  font-size: 20px;
+}
+.home--name--item {
+  color: rgb(4, 73, 112);
+  font-family: Fester_Bold;
+  font-size: 15px;
+}
+.home--content--item {
+  color: rgb(3, 3, 3);
+  font-family: Fester_Bold;
+  font-size: 15px;
+}
+
+.footer--title_text-style {
+  color: white;
+  font-family: Fester_Bold;
+  font-size: 20px;
+}
+
+.footer--content_text-style {
+  color: white;
+  font-family: text-regular;
+  font-size: 16px;
+}

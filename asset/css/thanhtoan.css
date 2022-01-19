@@ -1,0 +1,350 @@
+html,
+body {
+    font-family: text-regular;
+}
+
+.container {
+    position: relative;
+}
+
+.thanhtoan-content {
+    height: 100%;
+    width: 700px;
+    margin: 0px auto;
+    padding: 20px 40px;
+    background-color: var( --item_background-color);
+    border-radius: 10px;
+}
+
+.thanhtoan-content__thongtintour {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+}
+
+.thanhtoan-content__thongtintour--image img {
+    width: 400px;
+}
+
+.thanhtoan-content__thongtintour--noidung {
+    width: 100%;
+    margin-left: 15px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.space {
+    height: 40px;
+}
+
+#thanhtoan-tieude {
+    text-align: center;
+    font-family: Fester_Bold;
+    src: url(../font/Fester_Bold.otf);
+}
+
+#thanhtoan-tieude__mobile {
+    display: none;
+}
+
+.text-divider {
+    display: flex;
+    align-items: center;
+    --text-divider-gap: 10px;
+}
+
+.text-divider::before,
+.text-divider::after {
+    content: '';
+    height: 1px;
+    background-color: #333;
+    flex-grow: 1;
+}
+
+.text-divider::before {
+    width: 10px;
+}
+
+.text-divider::after {
+    width: 500px;
+}
+
+.text-divider::before {
+    margin-right: var(--text-divider-gap);
+}
+
+.text-divider::after {
+    margin-left: var(--text-divider-gap);
+}
+
+.thanhtoan-content__hanhkhach {
+    border: 1px solid black;
+    border-top: none;
+    margin-top: -52px;
+}
+
+.thanhtoan-content__hanhkhach--thongtin {
+    padding-left: 20px;
+    margin-top: 20px;
+    display: flex;
+}
+
+.x {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.loaihanhkhach {
+    min-width: 500px;
+}
+
+.nguoilon {
+    margin-top: 20px;
+}
+
+.soluongxgia {
+    margin-right: 20px;
+    display: flex;
+}
+
+.gia {
+    min-width: 90px;
+}
+
+.phuthu {
+    min-width: 500px;
+}
+
+.magiamgia {
+    min-width: 400px;
+}
+
+.apdungmagiamgia {
+    display: flex;
+}
+
+.input-themma {
+    width: 90px;
+    height: 20px;
+}
+
+.button-apdung {
+    background-color: #5DA9DD;
+    color: white;
+    width: 100px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 17px;
+    border-radius: 5px;
+    border: none;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+    margin-left: 5px;
+}
+
+.hr {
+    border: 1px solid rgb(112, 108, 108);
+    width: 600px;
+    margin: 20px auto;
+}
+
+.thanhtoan-content__hanhkhach--phuongthucthanhtoan {
+    display: flex;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.thanhtoantongcong {
+    display: flex;
+    width: 100%;
+}
+
+.tongcong {
+    margin-left: 20px;
+    margin-top: 0px;
+    flex: 1;
+}
+
+.tongtien {
+    align-items: flex-end;
+    flex: 1;
+    margin-left: 320px;
+    color: #F40000;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.phuongthucthanhtoan {
+    min-width: 500px;
+}
+
+.chonphuongthuc {
+    background-color: #5DA9DD;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.thanhtoan-content__button-datngay {
+    align-items: center;
+    display: flex;
+}
+
+.button-datngay {
+    background-color: #D74848;
+    color: white;
+    font-family: Fester_Bold;
+    src: url(../font/Fester_Bold.otf);
+    width: 130px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+    margin: 20px auto;
+}
+
+.dttc-img img {
+    width: 15%;
+    height: 15%;
+}
+
+.dttc-img,
+.dttc-text {
+    text-align: center;
+}
+
+.closebtn {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+}
+
+.dathangthanhcong {
+    width: 200px;
+    height: 100px;
+    background-color: rgba(255, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+}
+
+#tttc-body {
+    overflow-x: hidden;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(31, 28, 28, 0.4);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+}
+
+@media screen and (max-width:700px) {
+    .thanhtoan-content {
+        height: 990px;
+        width: 80%;
+        margin: 0px auto;
+        padding: 10px 20px;
+    }
+    .hr {
+        border: 1px solid rgb(61, 60, 60);
+        width: 80%;
+        margin: 20px auto;
+    }
+    .text-divider {
+        display: none;
+    }
+    .thanhtoan-content__hanhkhach {
+        border: 1px solid black;
+        margin-top: 5px;
+    }
+    .thanhtoan-content__thongtintour {
+        flex-direction: column;
+    }
+    .thanhtoan-content__hanhkhach--thongtin {
+        padding-left: 15%;
+        display: flex;
+        margin-top: 5%;
+    }
+    .loaihanhkhach {
+        min-width: 180px;
+    }
+    .nguoilon {
+        margin-top: 0px;
+    }
+    .soluongxgia {
+        margin-right: 20px;
+    }
+    .phuthu {
+        min-width: 180px;
+    }
+    .magiamgia {
+        min-width: 180px;
+    }
+    #thanhtoan-tieude__mobile {
+        display: flex;
+        margin-left: 5%;
+        text-align: left;
+    }
+    .tongcong {
+        margin-left: 5%;
+    }
+    .tongtien {
+        margin-left: 0px;
+    }
+    .phuongthucthanhtoan {
+        margin-left: 10%;
+        min-width: 180px;
+    }
+    .apdungmagiamgia {
+        flex-direction: column;
+    }
+    .button-apdung {
+        margin-top: 10px;
+        margin-left: 0%;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .thanhtoan-content {
+        height: 930px;
+        width: 85%;
+        margin: 0px auto;
+        padding: 10px 20px;
+    }
+    .thanhtoan-content__thongtintour {
+        flex-direction: column;
+    }
+    .thanhtoan-content__thongtintour--image img {
+        width: 350px;
+    }
+    #thanhtoan-tieude__mobile {
+        margin-left: 5%;
+    }
+    .button-apdung {
+        width: 100px;
+        margin-left: 0%;
+    }
+    .thanhtoan-content__hanhkhach--thongtin {
+        padding-left: 10%;
+    }
+    .tongcong {
+        margin-left: 5%;
+    }
+    .tongtien {
+        margin-left: 60px;
+    }
+    .phuongthucthanhtoan {
+        margin-left: 0%;
+    }
+}

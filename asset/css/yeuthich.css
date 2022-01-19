@@ -1,0 +1,311 @@
+.yeuthich-content{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 0 ;
+}
+.yeuthich__chucnang-header{
+    display: flex;
+    height: 80px;
+    margin: 100px 0 10px 0;
+}
+.yeuthich-sapxep{
+    flex: 1;
+    margin:  15px 10px 15px 0;
+    position: relative;
+}
+.yeuthich-btnsapxep{ 
+    position: absolute; 
+    right:  0px;
+    left: 0px;
+    border-radius: 10px;
+    border: none;
+    font-family: text-regular;
+    font-size: 17px;
+    text-align: center;
+    min-height: 40px;
+    width: 95%;  
+    margin:5px 0;
+}
+.yeuthich-timkiem{
+    flex: 3;
+    margin:  15px 0px 15px 0; 
+    position: relative;
+}
+.yeuthich-btnsearch{
+    position: absolute; 
+    right:  0px;
+    border-radius: 10px;
+    color: black;
+    font-family: text-regular;
+    font-size: 17px;
+    min-height: 40px;
+    width: 92%;
+    background-image: url("../images/ICON/search.png");
+    background-size: 30px;
+    background-position: 2px;
+    background-repeat: no-repeat;
+    padding: 0 0 0 40px;
+    float: right;
+    border: none;
+    margin: 5px 0;
+}
+.yeuthich-tourbox{
+    display: flex;
+    background-color: var(  --item_background-color);
+    border-radius: 10px;
+    width: 100%;
+    margin: 20px 0 ; 
+}
+.yeuthich-tourbox:hover{
+    transform: scale(1.03);
+}
+.yeuthich-tour-img{
+    flex: 2;
+    margin: 10px;
+} 
+.yeuthich-tour-img img{
+    width: 100%;
+}
+.yeuthich-tour-img:hover{
+    cursor: pointer;
+}
+.yeuthich-tour-thongtin{
+    flex: 3;
+    font-family: text-regular;
+    font-size: 17px;
+    margin: 10px 20px;
+}
+.yeuthich-tour-thongtin p{
+    margin: 5px 0;
+}
+#yeuthich-tentour{
+    margin: 0;
+    font-family: Fester_Bold;
+    font-size: 25px;
+    color: #064682;
+}
+#yeuthich-tentour:hover{
+    cursor: pointer;
+}
+#yeuthich-chitiet-color{
+    color: #064682;
+}
+#yeuthich-chitiet-gia{
+    font-family: Fester_Bold;
+    font-size: 25px;
+}
+#yeuthich-chitiet-giamgia{
+    font-family: Fester_Bold;
+    font-size: 25px;
+    color: red;
+}
+.yeuthich-tour-button{
+    flex: 2;
+    margin: 10px;
+    position: relative;
+}
+.yeuthich-datngay{
+    border-radius: 10px;
+    background-color: #D74848;
+    font-family: Fester_Bold;
+    font-size: 17px;
+    color: white;
+    width: 90%;
+    height: 40px;
+    line-height: 35px;
+    text-align: center;
+    border: none;
+    margin: 20px 0;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(-200%);
+}
+.yeuthich-datngay img{
+    width: 25px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.yeuthich-datngay:hover{
+    cursor: pointer;
+    background-color: #8a1d1d;
+}
+.yeuthich-xem{
+    border-radius: 10px;
+    font-family: text-regular;
+    font-size: 17px;
+    width: 90%;
+    height: 40px;
+    border: none;
+    margin: 20px 0;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(-75%);
+}
+.yeuthich-xem:hover{
+    cursor: pointer;
+    background-color: rgb(182, 180, 177);
+}
+.yeuthich-xoaitem{
+    border-radius: 10px;
+    font-family: text-regular;
+    font-size: 17px;
+    width: 90%;
+    height: 40px;
+    border: none;
+    margin: 20px 0;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(50%);
+}
+.yeuthich-xoaitem:hover{
+    cursor: pointer;
+    background-color:  rgb(182, 180, 177);
+}
+.yeuthich-phuongtien{
+    text-align: right;
+}
+.yeuthich-phuongtien input{
+    margin: 0px 5px;
+}
+.yeuthich-button{  
+    min-width: 200px;
+    height: 40px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px 30px;
+    font-family: Fester_Bold;
+    font-size: 20px;
+    color: white;
+    background-color: #5DA9DD;
+    border: none;
+}
+@media only screen and (max-width: 1000px) {
+    .yeuthich-tour-img img{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 900px) {   
+     .yeuthich-btnsearch{
+         border-radius: 5px;
+         width: 90%;
+     }
+    .yeuthich-btnsapxep{ 
+        border-radius:5px;
+        width: 90%; 
+    }        
+    .yeuthich-tourbox{
+        border-radius: 5px;
+        flex-direction: column;
+    }
+    .yeuthich-tour-img{
+        flex: 1;
+        text-align: center;
+    } 
+    .yeuthich-tour-img img{
+      width: 90%;
+    }
+    .yeuthich-tour-thongtin{
+        flex: 2;
+        text-align: left;
+    }
+    #yeuthich-tentour{
+        text-align: center;
+    }
+    .yeuthich-tour-button{
+        flex: 1;
+        margin: 0;
+    }
+    .yeuthich-datngay{
+        border-radius: 5px;
+        transform: translateY(-200%);
+        right: 5px;
+        width: 30%;
+    }
+    .yeuthich-xem{
+        width: 30%;
+        border-radius: 5px;
+        transform: translateY(-90%);
+        right: 5px;
+    }
+    .yeuthich-xoaitem{
+        width: 30%;
+        border-radius: 5px;
+        transform: translateY(20%);
+        right: 5px;
+    }
+    .yeuthich-phuongtien{
+       display: none;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .yeuthich__chucnang-header{
+        margin: 100px 0 10px 0; 
+        flex-direction: column-reverse;
+        margin: 50px 0 ;
+    }
+     .yeuthich-btnsearch{
+         border-radius: 5px;
+         font-size: 17px;
+         float:none;
+         width: 90%;
+         right: auto;
+     }
+    .yeuthich-sapxep{
+        margin: 15px 0;
+    }
+    .yeuthich-btnsapxep{ 
+        left: auto;
+        border-radius: 5px;
+        font-size: 17px;
+        width: 30%; 
+        margin: 10px 0;
+    }        
+    .yeuthich-tourbox{
+        border-radius: 5px;
+        flex-direction: column;
+    }
+    .yeuthich-tour-img{
+        flex: 1;
+        text-align: center;
+    } 
+    .yeuthich-tour-img img{
+      width: 90%;
+    }
+    .yeuthich-tour-thongtin{
+        flex: 2;
+        text-align: center;
+    }
+    #yeuthich-chitiet-gia{
+        text-align: left;
+    }
+    #yeuthich-chitiet-giamgia{
+        text-align: left;
+    }
+    #yeuthich-chitiet-ma, #yeuthich-chitiet-thoigian, #yeuthich-chitiet-noikh, #yeuthich-chitiet-ngay{
+        display: none;
+    }
+    .yeuthich-tour-button{
+        flex: 1;
+        margin: 0;
+    }
+    .yeuthich-datngay{
+        border-radius: 5px;
+        transform: translateY(0%);
+        right: 0;
+        width: 20%;
+        background: none;
+    }
+    #yeuthich-datngay-text{
+        display: none;
+    }
+    .yeuthich-xem{
+        display: none;
+    }
+    .yeuthich-xoaitem{
+        display: none;
+    }
+    .yeuthich-phuongtien{
+       display: none;
+    }
+}

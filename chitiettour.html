@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPTRAVEL CHI TIẾT TOUR</title>
+    <!-- Chèn font -->
+    <link rel="stylesheet" href="asset/css/font.css">
+    <link rel="stylesheet" href="asset/css/color.css">
+    <link rel="stylesheet" href="asset/css/text_style.css">
+    <link rel="stylesheet" href="asset/css/background.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <script src="asset/javascrip/header.js"></script>
+    <!-- Favicon :  title off website -->
+    <link rel="shortcut icon" href="asset/favicon/titlelogo.png">
+    <!-- Thư viện w3.js -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script></script>
+    <!-- Link css -->
+    <link rel="stylesheet" href="./asset/css/chitiettour.css">
+    <link rel="stylesheet" href="./asset/css/tour-thi.css">
+    <script src="asset/javascrip/chitiettour.js"></script>
+    <script>
+        function getUrlParams() {
+            var params = {};
+            var queryString = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                params[key] = value;
+            });
+            return params;
+        }
+        var matour = unescape(getUrlParams().matour);
+
+    </script>
+    <!--  backtop1 -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="asset/css/backtop.css">
+</head>
+
+<body>
+    <div class="container">
+        <!--load header -->
+        <div w3-include-html="header.html"></div>
+        <div class="heigh-top"></div>
+
+        <div class="chitiettour-content" id="chitiettour-content" style="margin-top: 10px;">
+            <!-- Bỏ nội dung vô đây -->
+        </div>
+
+        <!-- load footer -->
+        <div w3-include-html="footer.html"></div>
+
+        <!-- gọi thư viện -->
+        <script>
+            w3.includeHTML();
+        </script>
+
+        <script src="asset/javascrip/formatnumber.js"></script>
+    </div>
+    <!--  backtop2 -->
+    <div id="backtop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+</body>
+<!-- backtop3 -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+<script src="./asset/javascrip/backtop.js"></script>
+<script src="./asset/javascrip/dangnhap.js"></script>
+<script src="./asset/javascrip/onload_avar.js"></script>
+</html>

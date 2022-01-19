@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPTRAVEL_THONGTIN</title>
+    <!-- Chèn font -->
+    <link rel="stylesheet" href="asset/css/font.css">
+    <link rel="stylesheet" href="asset/css/color.css">
+    <link rel="stylesheet" href="asset/css/text_style.css">
+    <link rel="stylesheet" href="asset/css/background.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <script src="asset/javascrip/header.js"></script>
+    <!-- Favicon :  title off website -->
+    <link rel="shortcut icon" href="asset/favicon/titlelogo.png">
+    <!-- Thư viện w3.js -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="./asset/javascrip/thongtin.js"></script>
+
+    <link rel="stylesheet" href="./asset/css/thongtin.css">
+
+    <script>
+        function getUrlParams() {
+            var params = {};
+            var queryString = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
+                params[key] = value;
+            });
+            return params;
+        }
+        var matour = unescape(getUrlParams().matour);
+    </script>
+    <!--  backtop1 -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="asset/css/backtop.css">
+</head>
+
+<body>
+    <div class="container">
+        <!--load header -->
+        <div w3-include-html="header.html"></div>
+
+        <div class="space"> </div>
+        <div class="thongtin-content" style="margin-top: 100px;" id="id_thongtin_content">
+            <div class="thongtin-content__thongtintour">
+                <div class="thongtin-content__thongtintour--image">
+                    <img src="./asset/images/IMAGE/dai-duong-trong-xanh-hinh-nen-1920x1080_48.jpg" alt="Image">
+                </div>
+                <div class="thongtin-content__thongtintour--noidung">
+                    <div><a href="https://www.google.com.vn/?hl=vi">Liên Tuyến Brunei - Nhật Bản</a></div>
+                    <br>
+                    <div>
+                        <label>Mã tour:</label>
+                        <a href="https://www.google.com.vn/?hl=vi">FFFFFF</a>
+                        <br>
+                        <label>Thời gian:</label>
+                        <a href="https://www.google.com.vn/?hl=vi">4 ngày 3 đêm</a>
+                        <br>
+                        <label>Nơi khởi hành:</label>
+                        <a href="https://www.google.com.vn/?hl=vi">TP Hồ Chí Minh</a>
+                        <br>
+                        <label>Ngày khởi hành:</label>
+                        <a href="https://www.google.com.vn/?hl=vi">12/2/2022</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-divider">
+                <h3 id="thongtin-tieude">Thông tin liên lạc</h3>
+            </div>
+            <div class="thongtin-content__thongtinlienlac">
+                <h3 id="thongtin-tieude__mobile">Thông tin liên lạc</h3>
+                <div class="form">
+                    <div class="form__row">
+                        <div><label>Họ tên:</label></div>
+                        <div><input id="test" type="text"></div>
+                    </div>
+                    <div class="form__row">
+                        <div><label>Email:</label></div>
+                        <div> <input type="email"></div>
+                    </div>
+                </div>
+                <div class="form">
+                    <div class="form__row">
+                        <div><label>Số điện thoại:</label></div>
+                        <div><input type="tel"></div>
+                    </div>
+                    <div class="form__row">
+                        <div><label>Địa chỉ:</label></div>
+                        <div><input type="text"></div>
+                    </div>
+                </div>
+                <h4 id="thongtin-tieude">Hành khách</h4>
+                <div class="form-hanhkhach">
+                    <div class="hanhkhach">
+                        <div class="hanhkhach__title">
+                            <h4>Người lớn</h4>
+                            <p>>= 16 tuổi</p>
+                        </div>
+                        <div class="buttons-soluong">
+                            <button class="giamsl is-form" onclick="tru1()"><span class="tru">-</span></button>
+                            <input class="sl" value="1" id="textbox1" readonly></input>
+                            <button class="tangsl is-form" onclick="cong1()"> <span class="cong">+</span></button>
+                        </div>
+                    </div>
+                    <div class="hanhkhach">
+                        <div class="hanhkhach__title">
+                            <h4>Trẻ em</h4>
+                            <p>11 - 15 tuổi</p>
+                        </div>
+                        <div class="buttons-soluong">
+                            <button class="giamsl" onclick="tru2()"><span class="tru">-</span></button>
+                            <input class="sl" value="1" id="textbox2" readonly></input>
+                            <button class="tangsl" onclick="cong2()"> <span class="cong">+</span></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-hanhkhach">
+                    <div class="hanhkhach">
+                        <div class="hanhkhach__title">
+                            <h4>Trẻ nhỏ</h4>
+                            <p>5 - 10 tuổi</p>
+                        </div>
+                        <div class="buttons-soluong">
+                            <button class="giamsl" onclick="tru3()"><span class="tru">-</span></button>
+                            <input class="sl" value="1" id="textbox3" readonly></input>
+                            <button class="tangsl" onclick="cong3()"> <span class="cong">+</span></button>
+                        </div>
+                    </div>
+                    <div class="hanhkhach">
+                        <div class="hanhkhach__title">
+                            <h4>Em bé</h4>
+                            <p>Dưới 5 tuổi</p>
+                        </div>
+                        <div class="buttons-soluong">
+                            <button class="giamsl" onclick="tru4()"><span class="tru">-</span></button>
+                            <input class="sl" value="1" id="textbox4" readonly></input>
+                            <button class="tangsl" onclick="cong4()"> <span class="cong">+</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="thongtin-content__button">
+                <button class="button-trove" onclick="trove()">Trở về</button>
+                <a href="thanhtoan.html"> <button class="button-tieptheo">Tiếp theo</button></a>
+            </div>
+        </div>
+        <div class="space"></div>
+
+        <!-- load footer -->
+        <div w3-include-html="footer.html"></div>
+
+        <!-- gọi thư viện -->
+        <script>
+            // auto import customer information
+            var hoten = '';
+            var email = '';
+            var sdt = '';
+            var diachi = '';
+            if (localStorage.getItem("User_login") !== null) {
+                var us = localStorage.getItem("User_login");
+                var user = JSON.parse(us);
+                hoten = user[0][1];
+                email = user[0][2];
+                sdt = user[0][3];
+                diachi = user[0][4];
+            }
+            var xmlhttp = new XMLHttpRequest();
+            var url = "asset/data/tour.json";
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var myArr = JSON.parse(this.responseText);
+                    myFunction(myArr);
+                }
+            }
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send();
+
+            function myFunction(arr) {
+
+                var div = '';
+                var i;
+                for (i = 0; i < arr.length; i++) {
+                    if (arr[i].ma_tour == matour) {
+                        div += '<div class="thongtin-content__thongtintour"><div class="thongtin-content__thongtintour--image"><img src="' + arr[i].images[1] + '" alt="Image"> </div><div class="thongtin-content__thongtintour--noidung"><div><b><a>' + arr[i].ten_tour + '</a></b></div><br><div><label>Mã tour:</label>&nbsp<a >' + arr[i].ma_tour + '</a><br><br><label>Thời gian:</label>&nbsp<a>' + arr[i].thoigian + '</a><br><br><label>Nơi khởi hành:</label>&nbsp<a>' + arr[i].noikhoihanh + '</a><br><br><label>Ngày khởi hành:</label>&nbsp<a>' + arr[i].ngaykhoihanh + '</a></div></div></div><div class="text-divider"><h3 id="thongtin-tieude">Thông tin liên lạc</h3></div><div class="thongtin-content__thongtinlienlac"><h3 id="thongtin-tieude__mobile">Thông tin liên lạc</h3><div class="form"><div class="form__row"><div><label>Họ tên:</label></div><div><input id="hoTen" value="' + hoten + '" type="text"></div></div><div class="form__row"><div><label>Email:</label></div><div> <input id="email" value="' + email + '"  type="email"></div></div></div><div class="form"><div class="form__row"><div><label>Số điện thoại:</label></div><div><input id="sdt" value="' + sdt + '"  type="tel"></div></div><div class="form__row"><div><label>Địa chỉ:</label></div><div><input id="diachi" value="' + diachi + '"  type="text"></div></div></div><h4 id="thongtin-tieude">Hành khách</h4><div class="form-hanhkhach"><div class="hanhkhach"><div class="hanhkhach__title"><h4>Người lớn</h4><p>>= 16 tuổi</p></div><div class="buttons-soluong"><button class="giamsl is-form" onclick="tru1()"><span class="tru">-</span></button><input class="sl" value="1" id="textbox1" readonly></input><button class="tangsl is-form" onclick="cong1()"> <span class="cong">+</span></button></div></div><div class="hanhkhach"><div class="hanhkhach__title"><h4>Trẻ em</h4><p>11 - 15 tuổi</p></div><div class="buttons-soluong"><button class="giamsl" onclick="tru2()"><span class="tru">-</span></button><input class="sl" value="1" id="textbox2" readonly></input><button class="tangsl" onclick="cong2()"> <span class="cong">+</span></button></div></div></div><div class="form-hanhkhach"><div class="hanhkhach"><div class="hanhkhach__title"><h4>Trẻ nhỏ</h4><p>5 - 10 tuổi</p></div><div class="buttons-soluong"><button class="giamsl" onclick="tru3()"><span class="tru">-</span></button><input class="sl" value="1" id="textbox3" readonly></input><button class="tangsl" onclick="cong3()"> <span class="cong">+</span></button></div></div><div class="hanhkhach"><div class="hanhkhach__title"><h4>Em bé</h4><p>Dưới 5 tuổi</p></div><div class="buttons-soluong"><button class="giamsl" onclick="tru4()"><span class="tru">-</span></button><input class="sl" value="1" id="textbox4" readonly></input><button class="tangsl" onclick="cong4()"> <span class="cong">+</span></button></div></div></div></div><div class="thongtin-content__button"><button class="button-trove" onclick="trove()">Trở về</button> <button class="button-tieptheo" onclick="themvaothanhtoan(this);gotoThanhToan(' + "'" + arr[i].ma_tour + "'" + ') " >Tiếp theo</button></div>';
+                        break;
+                    }
+                }
+                div += "</div>";
+                document.getElementById("id_thongtin_content").innerHTML = div;
+            }
+
+            function datngay(id) {
+                window.location.href = ""
+            }
+            w3.includeHTML();
+        </script>
+        <!--Search-->
+        <script src="./asset/javascrip/search.js"></script>
+
+        <script src="./asset/javascrip/dangnhap.js"></script>
+        <script src="./asset/javascrip/onload_avar.js"></script>
+    </div>
+    <!--  backtop2 -->
+    <div id="backtop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+</body>
+<!-- backtop3 -->
+<script src="./asset/javascrip/search.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="./asset/javascrip/backtop.js">
+</script>
+
+</html>

@@ -5,16 +5,305 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logo nè</title>
+    <title>EPTRAVEL_HOME</title>
+    <!-- Chèn font -->
+    <link rel="stylesheet" href="asset/css/font.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="asset/css/color.css">
+    <link rel="stylesheet" href="asset/css/text_style.css">
+    <link rel="stylesheet" href="asset/css/background.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <script src="asset/javascrip/header.js"></script>
+
+    <!-- Thư viện w3.js -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+
+
+    <!-- Favicon :  title off website -->
+    <link rel="shortcut icon" href="asset/favicon/titlelogo.png">
+
+    <!-- css click-slider -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    <link rel="stylesheet" href="asset/css/style.css">
+    <!--  backtop1 -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="asset/css/backtop.css">
+
+
+
 </head>
 
 <body>
+    <div class="container">
+        <!--load header -->
+        <div w3-include-html="header.html"></div>
 
-    <div style="text-align:center">
-        <img src="logo.gif" alt="Error" width="500px">
+
+        <div class="home-content" style="margin-top: 10px;">
+            <div style=" height: 100px; width: 0px;"></div>
+            <div class="slider-one">
+                <div class="slider-item">
+                    <div class="img"><img src="./asset/images/banner/banner1.jpg" alt="Error"></div>
+                </div>
+                <div class="slider-item">
+                    <div class="img"><img src="./asset/images/banner/banner2.jpg" alt="Error"></div>
+                </div>
+                <div class="slider-item">
+                    <div class="img"><img src="./asset/images/banner/banner3.jpg" alt="Error"></div>
+                </div>
+                <div class="slider-item">
+                    <div class="img"><img src="./asset/images/banner/banner4.jpg" alt="Error"></div>
+                </div>
+                <div class="slider-item">
+                    <div class="img"><img src="./asset/images/banner/banner5.jpg" alt="Error"></div>
+                </div>
+
+            </div>
+
+
+            <div id="slider-three-famous">
+                <div class="slider-three">
+
+                    <!-- Item giả -->
+                    <!-- <div class="slider-item">
+                        <div class="img"><img src="asset/images/IMAGE/img_temp_500x350.png" alt="Error"></div>
+                        <div class="img-title">
+                            <h4>TÊN TOUR - CÁC ĐỊA ĐIỂM THAM QUAN NỔI TIẾNG</h4>
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
+
+
+            <div class="home__tintuc">
+                <div class="home__tintuc-dulich">
+                    <div class="home__tintuc-dulich--title">
+                        <p class="home--title--item">Tin tức du lịch</p>
+                    </div>
+                    <div class="home__tintuc-dulich--item-cont">
+                        <div class="home__tintuc-dulich--item" id="id_tintucDuLich">
+
+                            <!-- Item giả -->
+                            <!-- <div class="ttdl--row">
+                                <div class="ttdl--row_item ttdl--row-left">
+                                    <div class="img"><img src="asset/images/IMAGE/img_temp_500x350.png" width="200px" alt="Error"></div>
+                                    <h3>hello Tin tức du lịch Tin tức du lịch Tin tức du lịch</h3>
+                                </div>
+                                <div class="ttdl--row_item ttdl--row-right">
+                                    <div class="img"><img src="asset/images/IMAGE/img_temp_500x350.png" width="200px" alt="Error"></div>
+                                    <h3>hello Tin tức du lịch Tin tức du lịch Tin tức du lịch</h3>
+                                </div>
+                            </div> -->
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="home__tintuc-quantam">
+                    <h3>Tin tức được quan tâm nhiều nhất</h3>
+
+                    <div class="tintuc-quantam__body" id="id_tintucQuanTam">
+
+                        <!-- item giả -->
+                        <!-- <div class="ttqt--row">
+                            <div class="ttqt--item ttqt--item-left">
+                                <div style="text-align:left"><img src="./asset/images/IMAGE/SanPham/NgoaiNuoc/ChauA/NhatBan/NhatBan1.jpg" alt="Error" width="150px"></div>
+                            </div>
+                            <div class="ttqt--item ttqt--item-right">
+                                <h4 class="title">ABBYZ</h4>
+                                <h4 class="date">20/11</h4>
+                            </div>
+                        </div> -->
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="home__tour">
+                <div class="home__tour-item home__tour-left"
+                    onclick='window.location.href = "tourdulich.html?quocgia=Trong%20Nước"'>
+                    <div class="img"><img src="asset/images/IMAGE/home-trongnuoc.png" alt="Error"></div>
+                    <div class="home-tour-title">
+                        tour trong nước
+                    </div>
+                </div>
+                <div class="home__tour-item home__tour-right"
+                    onclick='window.location.href = "tourdulich.html?quocgia=NgoaiNuoc"'>
+                    <div class="img">
+                        <img src="asset/images/IMAGE/home-ngoainuoc.png" alt="Error">
+                    </div>
+                    <div class="home-tour-title">
+                        tour ngoài nước
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="home__hot-tour">
+                <div class="home__hot-tour--title">
+                    <p>Các tour hot nhất hiện nay</p>
+                </div>
+                <div class="home__hot-tour--item" id="id_home__hot-tour--item">
+                    
+                    <!-- Item giả -->
+                    <!-- <div class="slider-item">
+                        <div class="img"><img src="asset/images/IMAGE/img_temp_500x350.png" alt="Error"></div>
+                        <p>Hà Nội - Bái Đính - Tràng An - Hạ Long - Yên Tử
+                        </p>
+                    </div>
+                    <div class="slider-item">
+                        <div class="img"><img src="asset/images/IMAGE/img_temp_500x350.png" alt="Error"></div>
+                    </div>
+                    <div class="slider-item">
+                        <div class="img"><img src="asset/images/IMAGE/img_temp_500x350.png" alt="Error"></div>
+                    </div>
+                   -->
+                </div>
+            </div>
+        </div>
+
+        <!-- load footer -->
+        <div w3-include-html="footer.html"></div>
+
     </div>
 
+
+
+
+    <!-- gọi thư viện -->
+    <script>
+        var xmlhttp = new XMLHttpRequest();
+        var url = "asset/data/tour.json";
+
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var myArr = JSON.parse(this.responseText);
+                threeFamous(myArr);
+                home__hot_tour(myArr);
+            }
+        }
+
+        xmlhttp.open("GET", url, true); //ra lệnh 
+        xmlhttp.send(); //thực hiênn
+
+        function threeFamous(arr) {
+            var i;
+            var div = '<div class="slider-three">';
+            for (i = 0; i < arr.length; i++) {
+                div += '<div class="slider-item"><div onclick="gotoChitiettour(' + "'" + arr[i].ma_tour + "'" + ')" class="img"><img src="' + arr[i].images[3] + '" alt="Error"></div><div class="img-title"><h4 onclick="gotoChitiettour(' + "'" + arr[i].ma_tour + "'" + ')">' + arr[i].ten_tour + '</h4></div></div>';
+            }
+
+            div += '</div>'
+            document.getElementById("slider-three-famous").innerHTML = div;
+
+        }
+
+        function home__hot_tour(arr) {
+            var i;
+            var div = '';
+            for (i = 0; i < arr.length; i++) {
+                div += '<div class="slider-item"><div onclick="gotoChitiettour(' + "'" + arr[i].ma_tour + "'" + ')" class="img"><img src="' + arr[i].images[4] + '" alt="Error"></div><p onclick="gotoChitiettour(' + "'" + arr[i].ma_tour + "'" + ')">' + arr[i].ten_tour + '</p></div>';
+            }
+
+            document.getElementById("id_home__hot-tour--item").innerHTML = div;
+
+        }
+
+
+        // Get data từ file tintuc.json
+        var xmlhttp_tt = new XMLHttpRequest();
+        var url_tt = "asset/data/tintuc.json";
+
+        xmlhttp_tt.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var myArr_tt = JSON.parse(this.responseText);
+                tintucQuanTam(myArr_tt);
+                tintucDuLich(myArr_tt);
+            }
+        }
+
+        xmlhttp_tt.open("GET", url_tt, true); //ra lệnh 
+        xmlhttp_tt.send(); //thực hiênn
+
+
+        function tintucDuLich(arr) {
+            var div = "";
+            var i = 0;
+            var j = 0;
+
+            for (i = 0; i < arr.length;) {
+
+                div += '<div class="ttdl--row"><div class="ttdl--row_item ttdl--row-left"><div class="img"><img onclick="gotoTinTuc(' + "'" + arr[i].tintuc_id + "'" + ')" src="' + arr[i].main_img + '" width="200px"alt="Error"></div><h3  onclick="gotoTinTuc(' + "'" + arr[i].tintuc_id + "'" + ')">' + arr[i].header + '</h3></div>'
+
+
+                i = i + 1
+
+                if (i == arr.length) {
+                    document.getElementById("id_tintucDuLich").innerHTML = div;
+                    break;
+                }
+
+                div += '<div class="ttdl--row_item ttdl--row-right"><div class="img"><img  onclick="gotoTinTuc(' + "'" + arr[i].tintuc_id + "'" + ')" src="' + arr[i].main_img + '" width="200px"alt="Error"></div><h3  onclick="gotoTinTuc(' + "'" + arr[i].tintuc_id + "'" + ')">' + arr[i].header + '</h3></div></div>';
+                i = i + 1;
+
+                if (i == arr.length) {
+                    document.getElementById("id_tintucDuLich").innerHTML = div;
+                    break;
+                }
+            }
+
+
+        }
+
+        function gotoTinTuc(id) {
+            window.location.href = "noidungtintuc.html??tintucid=" + id
+        }
+
+        function gotoChitiettour(id) {
+            window.location.href = "chitiettour.html?matour=" + id
+        }
+
+        function tintucQuanTam(arr) {
+            var div = "";
+            var i;
+
+            for (i = 0; i < arr.length; i++) {
+                div += "<div class='ttqt--row'><div class='ttqt--item ttqt--item-left'><div style='text-align:left'><img onclick='gotoTinTuc(" + '"' + arr[i].tintuc_id + '"' + ")' src='" + arr[i].main_img + "' alt='Error' width='150px'></div></div><div class='ttqt--item ttqt--item-right'><h4 onclick='gotoTinTuc(" + '"' + arr[i].tintuc_id + '"' + ")' class='title'>" + arr[i].header + "</h4><h4 onclick='gotoTinTuc(" + '"' + arr[i].tintuc_id + '"' + ")' class='date'>" + arr[i].date + "</h4></div></div>";
+            }
+
+            document.getElementById("id_tintucQuanTam").innerHTML = div;
+
+        }
+
+
+        w3.includeHTML();
+    </script>
+    <script src="./asset/javascrip/search.js"></script>
+
+
+
+    <!-- Gọi thư viện slick-slider -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="asset/javascrip/slider_home.js"></script>
+
+
+    </div>
+    <!--  backtop2 -->
+    <div id="backtop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+    <script src="./asset/javascrip/backtop.js">
+    </script>
+    <script src="./asset/javascrip/search.js"></script>
+    <script src="./asset/javascrip/dangnhap.js"></script>
+    <!-- <script src="./asset/javascrip/onload_avar.js"></script> -->
 </body>
-</div>
 
 </html>

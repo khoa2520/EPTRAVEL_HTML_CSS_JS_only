@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPTRAVEL</title>
+    <!-- Chèn font -->
+    <link rel="stylesheet" href="asset/css/font.css">
+    <link rel="stylesheet" href="asset/css/color.css">
+    <link rel="stylesheet" href="asset/css/text_style.css">
+    <link rel="stylesheet" href="asset/css/header.css">
+    <link rel="stylesheet" href="asset/css/background.css">
+    <link rel="stylesheet" href="asset/css/modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <script src="asset/javascrip/header.js"></script>
+    <!-- <script src="./asset/javascrip/onload_avar.js"></script> -->
+</head>
+
+<body>
+    <div class="container" style="position: fixed; top: 0;box-shadow: 0px 1px 20px rgba(39, 39, 39,0.6); z-index: 10; ">
+
+        <div class="header">
+            <div class="top-header">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="asset/images/logo/logo.png" alt="Error" width="200px">
+                    </a>
+                </div>
+                <div class=" search-icon main-icon">
+                    <form>
+                        <input onkeyup="searchFunc()" id="menu__search" class="search-bar_text-style" type="search" name="search" placeholder="Search..">
+                        <ul id="search__list">
+                        </ul>
+                    </form>
+                    <script src="./asset/javascrip/search.js"></script>
+                </div>
+                <div class="like-icon main-icon">
+                    <input type="button" onclick='window.location.href = "yeuthich.html"'>
+                    <div id="yeuthich_index"></div>
+                </div>
+                <div class="user-icon main-icon">
+                    <ul list-style="none"><input type="button" id="user-icon" onclick="user_block()">
+                        <div class="" id="user-block">
+                            <li id="dangnhap" onmouseover="user_block_open()" onclick="document.getElementById('modal__container').style.display='flex';user_block_close()">
+                                <span id="dangnhap__id">Đăng nhập</span>
+                                <i class="fas fa-sign-in-alt"></i>
+                            </li>
+                            <li onmouseenter="document.getElementById('dk_aa').style.color ='rgb(46, 0, 83)'" onmouseleave="document.getElementById('dk_aa').style.color ='rgb(255,255,255)'" onmouseover="user_block_open()" id="dangki">
+                                <a id="dk_aa" href="Dangky.html">Đăng ký</a>
+                                <i class="fas fa-users"></i>
+                            </li>
+                            <div class="select" onmouseout="user_block_close()"></div>
+                        </div>
+                    </ul>
+                </div>
+                <div id='hamburger-o' class="hamburger-icon main-icon">
+                    <button onclick="hamburger_o()"><i id='hamburger-o_i' class="fa fa-bars"
+                            aria-hidden="true"></i></button>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="nav" id="nav_id">
+            <ul>
+                <li> <a class="nav_text-style" href="index.html">Trang chủ</a></li>
+                <li> <a class="nav_text-style" href="tourdulich.html">Tour du lịch</a>
+                    <ul>
+                        <li onmouseenter="document.getElementById('nav_trongnuoc').style.display='block';" onmouseleave="close_narHover('nav_trongnuoc')"> <a class="nav_text-style" href="tourdulich.html?quocgia=Trong Nước">Tour trong nước</a>
+                            <ul id="nav_trongnuoc">
+                                <li><a href="tourdulich.html?quocgia=Trong Nước&khuvuc=Miền Bắc">Miền Bắc</a> </li>
+                                <li><a href="tourdulich.html?quocgia=Trong Nước&khuvuc=Miền Trung">Miền Trung</a> </li>
+                                <li><a href="tourdulich.html?quocgia=Trong Nước&khuvuc=Miền Nam">Miền Nam</a> </li>
+                            </ul>
+                        </li>
+                        <li onmouseenter="document.getElementById('nav_ngoainuoc').style.display='block';" onmouseleave="close_narHover('nav_ngoainuoc')"> <a class="nav_text-style" href="tourdulich.html?quocgia=NgoaiNuoc">Tour ngoài nước</a>
+                            <ul id="nav_ngoainuoc">
+                                <li><a href="tourdulich.html?quocgia=NgoaiNuoc&khuvuc=ChauA">Châu Á</a> </li>
+                                <li><a href="tourdulich.html?quocgia=NgoaiNuoc&khuvuc=ChauAu">Châu Âu</a> </li>
+                                <li><a href="tourdulich.html?quocgia=NgoaiNuoc&khuvuc=ChauMy">Châu Mỹ</a> </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li> <a class="nav_text-style" href="khuyenmai.html">Khuyến mãi</a></li>
+                <li> <a class="nav_text-style" href="tintuc.html">Tin tức</a></li>
+                <li> <a class="nav_text-style" href="lienhe.html">Liên hệ</a></li>
+            </ul>
+        </div>
+
+
+        <!-- modal layout -->
+        <div class="modal" id="modal__container">
+            <div class="modal__overlay" onclick="document.getElementById('modal__container').style.display='none'">
+
+            </div>
+            <div class="modal__body">
+                <div class="modal__inner">
+                    <!-- login  -->
+                    <div class="login">
+                        <input type="button" value="X" onclick="document.getElementById('modal__container').style.display='none'" id="close">
+                        <div style="text-align: center;padding-left: 50px;"><img style="" src="asset/images/logo/logo.png" width="250px" alt="
+                            error"></div>
+                        <h3 style="font-family: Fester_Bold; font-size: 25px;">Đăng nhập</h3>
+                        <form action="" method="get">
+                            <label class="lbl_login" for="taikhoan">Tài khoản <span style="color:red">*</span></label>
+
+                            <br>
+                            <input autofocus type="text" id="taikhoan" required>
+                            <br>
+                            <br>
+                            <br>
+
+
+                            <label class="lbl_login" for="matkhau">Mật khẩu <span style="color:red">*</span></label>
+
+                            <br>
+                            <input type="password" id="matkhau" required>
+                            <br>
+                            <br>
+                            <br>
+                            <label for=""><a id="linktoQuenmk" href="">Quên mật khẩu</a></label>
+                            <br>
+                            <br>
+                            <input onclick="login(this)" type="button" style="font-family: sans-serif; font-weight: normal;" value="Đăng nhập" id="btnDangnhap">
+                            <br>
+                            <br>
+                            <label for=""><a id="linktoDangki" href="Dangky.html">Tạo tài khoản mới</a></label>
+                            <br>
+                            <br>
+                            <label for="" class="hoac" style="font-size: 14px; color: rgb(102, 102, 102)">Hoặc</label>
+                            <br>
+                            <br>
+                            <input type="button" id="gg_link-icon">
+                            <input type="button" id="fb_link-icon">
+                            <input type="button" id="tw_link-icon">
+                            <br>
+
+                            <label for=""><a id="linktoHelp" href="">Help</a></label>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Lấy User infor -->
+        <script src="./asset/javascrip/dangnhap.js"></script>
+
+    </div>
+
+</body>
+
+</html>

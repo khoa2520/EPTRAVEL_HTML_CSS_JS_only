@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPTRAVEL_LienHe</title>
+    <!-- Chèn font -->
+    <link rel="stylesheet" href="asset/css/font.css">
+    <link rel="stylesheet" href="asset/css/color.css">
+    <link rel="stylesheet" href="asset/css/text_style.css">
+    <link rel="stylesheet" href="asset/css/background.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <script src="asset/javascrip/header.js"></script>
+
+    <!-- Thư viện w3.js -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+
+    <!-- Link css -->
+    <link rel="stylesheet" href="asset/css/lienhe.css">
+
+    <!-- Favicon :  title off website -->
+    <link rel="shortcut icon" href="asset/favicon/titlelogo.png">
+
+    <!--  backtop1 -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="asset/css/backtop.css">
+
+
+</head>
+
+<body>
+    <div class="container">
+        <!--load header -->
+        <div w3-include-html="header.html"></div>
+
+        <div class="lienhe-content" style="margin-top: 0px;">
+
+            <div class="lienhe--title">
+                Đội ngũ Admin
+            </div>
+
+            <div class="lienhe--admin-box">
+                <div class="lienhe--admin">
+                    <img src="asset/images/IMAGE/ThanhVien/Gam.jpg" alt="Gấm">
+                    <p>Nguyễn Phan Diệu Gấm</p>
+                    <p>K194060846</p>
+                </div>
+                <div class="lienhe--admin">
+                    <img src="asset/images/IMAGE/ThanhVien/Hien.PNG" alt="Hiền">
+                    <p>Phan Thị Lê Hiền</p>
+                    <p>K194060846</p>
+                </div>
+                <div class="lienhe--admin">
+                    <img src="asset/images/IMAGE/ThanhVien/Khoa.PNG" alt="Khoa">
+                    <p>Nguyễn Đăng Khoa</p>
+                    <p>K194060850</p>
+                </div>
+                <div class="lienhe--admin">
+                    <img src="asset/images/IMAGE/ThanhVien/Long.PNG" alt="Long">
+                    <p>Trương Thanh Long</p>
+                    <p>K194060853</p>
+                </div>
+                <div class="lienhe--admin">
+                    <img src="asset/images/IMAGE/ThanhVien/Thi.png" alt="Thi">
+                    <p>Nguyễn Thị Phương Thi</p>
+                    <p>K194060872</p>
+                </div>
+                <div class="lienhe--admin">
+                    <img src="asset/images/IMAGE/ThanhVien/Thy.PNG" alt="Thy">
+                    <p>Lê Mai Ngọc Thy</p>
+                    <p>K194060875</p>
+                </div>
+            </div>
+
+            <div class="lienhe--title">
+                Liên hệ với chúng tôi
+            </div>
+
+            <div class="lienhe--contact-box">
+                <form>
+                    <div class="lienhe__form-layout">
+                        <div class="lienhe--item-left">
+                            <label class="lienhe__label" for="ten"> Tên <span>*</span></label>
+                        </div>
+                        <div class="lienhe--item-right">
+                            <input class="lienhe__input" id="ten">
+                        </div>
+                    </div>
+
+                    <div class="lienhe__form-layout">
+                        <div class="lienhe--item-left">
+                            <label class="lienhe__label" for="email"> Email <span>*</span></label>
+                        </div>
+                        <div class="lienhe--item-right">
+                            <input class="lienhe__input" id="email">
+                        </div>
+                    </div>
+
+                    <div class="lienhe__form-layout">
+                        <div class="lienhe--item-left">
+                            <label class="lienhe__label" for="sdt">Số điện thoại <span>*</span> </label>
+                        </div>
+                        <div class="lienhe--item-right">
+                            <input class="lienhe__input" id="sdt">
+                        </div>
+                    </div>
+
+                    <div class="lienhe__form-layout">
+                        <div class="lienhe--item-left">
+                            <label class="lienhe__label" for="noidung">Nội dung<span>*</span> </label>
+                        </div>
+                        <div class="lienhe--item-right">
+                            <textarea autofocus class="lienhe__input" id="noidung" style="height: 150px;"></textarea>
+                        </div>
+                    </div>
+                    <div class="lienhe__button-box">
+                        <input class="lienhe__button" type="button" id="gui" onclick="themvaolienhe(this)" value="Gửi">
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="lienhe--title">
+                Về chúng tôi
+            </div>
+            <button class="drop-down__button" onclick="openNav()"><img class="drop-down__img"
+                    src="./asset/images/ICON/arrow-right.png"></button>
+            <div class="lienhe--introduction" id="myNav">
+                <a href="javascript:void(1)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="drop-down">
+                    <div class="drop-down__content">
+                        <div class="drop-down-content__left">
+                            <img class="drop-down--content__img" src="./asset/images/IMAGE/Vision.jpg">
+                        </div>
+                        <div class="drop-down-content__right">
+                            <h1>Tầm nhìn</h1>
+                            <p>Trở thành top những doanh nghiệp về du lịch có chất lượng dịch vụ tốt nhất tại Việt Nam
+                            </p>
+                            <p>Nằm trong top 5 công ty lữ hành uy tính tại Việt Nam</p>
+                        </div>
+
+                    </div>
+                    <div class="drop-down__content" style="display: flex;flex-direction: row;">
+
+                        <div class="drop-down-content__right">
+                            <h1>Sứ mệnh</h1>
+                            <p>Mang đến cho khách hàng sự trải nghiệm du lịch mới mẽ với giá cả phải chăng</p>
+                            <p>Nâng tầm du lịch Việt Nam ra quốc tế</p>
+                        </div>
+                        <div class="drop-down-content__left">
+                            <img class="drop-down--content__img" src="./asset/images/IMAGE/Mission.jpg">
+                        </div>
+                    </div>
+                    <div class="drop-down__content">
+                        <div class="drop-down-content__left">
+                            <img class="drop-down--content__img" src="./asset/images/IMAGE/CoreValue.jpg">
+                        </div>
+                        <div class="drop-down-content__right">
+                            <h1>Giá trị cốt lõi</h1>
+                            <p>Sự hài lòng của khách hàng là mục tiêu trung tâm của doanh nghiệp</p>
+                            <p>Thái độ hơn trình độ</p>
+                            <p>Đổi mới không ngừng</p>
+                        </div>
+                    </div>
+
+                </div>
+                <script>
+                    function openNav() {
+                        document.getElementById("myNav").style.width = "100%";
+                    }
+
+                    function closeNav() {
+                        document.getElementById("myNav").style.width = "0%";
+                    }
+                </script>
+
+            </div>
+            
+            <!--  backtop2 -->
+            <div id="backtop">
+                <i class="fas fa-chevron-up"></i>
+            </div>
+
+            <script src="asset/javascrip/lienhe.js"></script>
+
+            <!-- gọi thư viện -->
+            <script>
+                w3.includeHTML();
+            </script>
+            <!--Search-->
+            <script src="./asset/javascrip/search.js"></script>
+        </div>
+        <!-- load footer -->
+        <div w3-include-html="footer.html"></div>
+
+        <script>
+            // auto import customer information
+            var us = localStorage.getItem("User_login");
+            var user = JSON.parse(us);
+            document.getElementById('ten').value = user[0][1];
+            document.getElementById('email').value = user[0][2];
+            document.getElementById('sdt').value = user[0][3];
+
+        </script>
+
+        <script src="./asset/javascrip/dangnhap.js"></script>
+        <script src="./asset/javascrip/onload_avar.js"></script>
+
+</body>
+<!-- backtop3 -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+<script src="./asset/javascrip/backtop.js">
+</script>
+
+</html>

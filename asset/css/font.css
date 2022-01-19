@@ -1,0 +1,20 @@
+@font-face {
+    font-family: Fester_Bold;
+    src: url(../font/Fester_Bold.otf);
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(../font/Montserrat_Regular.otf);
+}
+@font-face {
+    font-family: text-regular;
+    src: url(../font/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: text-bold;
+    src: url(../font/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: text-italic;
+    src: url(../font/Roboto-Italic.ttf);
+}

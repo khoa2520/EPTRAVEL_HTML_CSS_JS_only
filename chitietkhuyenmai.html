@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPTRAVEL_KHUYENMAI</title>
+    <!-- Chèn font -->
+    <link rel="stylesheet" href="asset/css/font.css">
+    <link rel="stylesheet" href="asset/css/color.css">
+    <link rel="stylesheet" href="asset/css/text_style.css">
+    <link rel="stylesheet" href="asset/css/background.css">
+    <link rel="stylesheet" href="./asset/css/khuyenmai.css">
+    <link rel="stylesheet" href="./asset/css/chitietkhuyenmai.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <script src="asset/javascrip/header.js"></script>
+    <!-- Favicon :  title off website -->
+    <link rel="shortcut icon" href="asset/favicon/titlelogo.png">
+    <!-- Thư viện w3.js -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="asset/javascrip/formatnumber.js"></script>
+
+    <!-- Link css -->
+    <script>
+    </script>
+    <!--  backtop1 -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="asset/css/backtop.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <!--load header -->
+        <div w3-include-html="header.html"></div>
+        <div class="chitietkhuyenmai-content">
+            <!-- Bỏ nội dung vô đây -->
+            <div class="chitietkhuyenmai_tittle1" style="margin-top: 158px;">
+                <div class="chitietkhuyenmai_tour--item">
+                    <div class="home--title--item">TOUR KHUYẾN MÃI TRONG NƯỚC</div>
+                </div>
+            </div>
+            <div id="chitietkhuyenmai_category_trongnuoc"></div>
+
+            <div class="chitietkhuyenmai_tittle1">
+                <div class="chitietkhuyenmai_tour--item">
+                    <div class="home--title--item">TOUR KHUYẾN MÃI QUỐC TẾ</div>
+                </div>
+            </div>
+            <div id="chitietkhuyenmai_category_nuocngoai"></div>
+        </div>
+
+        <!-- load footer -->
+        <div w3-include-html="footer.html"></div>
+
+    </div>
+    <script>
+        var xmlhttp = new XMLHttpRequest();
+        var url = "../asset/data/tour.json";
+
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var myArr = JSON.parse(this.responseText);
+                myFunction(myArr);
+            }
+        }
+        xmlhttp.open("GET", url, true); // Ra lệnh chứ chưa thực hiện
+        xmlhttp.send(); //Thực hiên thực sự
+
+        function goThongtin(id) {
+            window.location.href = 'thongtin.html?matour=' + id;
+        }
+
+        function goChiTiet(id) {
+            window.location.href = 'chitiettour.html?matour=' + id;
+        }
+
+        function myFunction(arr) {
+            var div1 = "<div>";
+            var div2 = "<div>";
+
+            var i;
+
+            for (i = 0; i < arr.length; i++) {
+                var x = arr[i].giatiennguoilon;
+                var y = arr[i].giamgia;
+                var z = x - (x * (y / 100));
+                if (arr[i].quocgia == "Tour du lịch trong nước" && arr[i].giamgia != 0) {
+                    div1 += "<div class='chitietkhuyenmai_row'><div class='chitietkhuyenmai_sp'><a href='chitiettour.html?matour=" + arr[i].ma_tour + "'><img class='chitietkhuyenmai_img' src='" + arr[i].images[1] + "'> <label class='chitietkhuyenmai_lbl--chitiet'>Xem Chi Tiết </label> </div>   <div class='chitietkhuyenmai_content'><h2 class='chitietkhuyenmai_text'>" + arr[i].ten_tour + "</h2></a><p> Mã tour: " + "<span>" + arr[i].ma_tour + "</span>" + "</p><p class='chitietkhuyenmai_thoigian'>Thời gian: " + arr[i].thoigian + "</p><p class='chitietkhuyenmai_diadiem'>Địa điểm khởi hành: " + arr[i].noikhoihanh + "</p><div class='chitietkhuyenmai_gia'>" + formatNumber(z) + "<span>đ</span></div><div class='chitietkhuyenmai_giacu'>" + formatNumber(arr[i].giatiennguoilon) + "<span>đ</span></div><a href='thongtin.html?matour=" + arr[i].ma_tour + "'><input onclick='goThongtin(" + '"' + arr[i].ma_tour + '"' + ")'  type='button' class='chitietkhuyenmai_imagecard' value='Đặt ngay'></a><img class='chitietphuongtien_item1' src='./asset/images/ICON/bus.png' alt='bus'><img class='chitietphuongtien_item2' src='./asset/images/ICON/plane.png' alt='plane'><div class='chitietkhuyenmai_percent'><img class='chitietkhuyenmai_percent--tag' src='./asset/images/ICON/tag.png'><div class='chitietkhuyenmai_percent--text' >-<span>" + arr[i].giamgia + "</span><span>%</span></div></div><input type='button' class='chitietkhuyenmai_button_yeuthich' value='Thêm vào yêu thích' onclick='themyeuthich_km(this)' ></div></div>"
+                } else if (arr[i].quocgia == "Tour du lịch nước ngoài" && arr[i].giamgia != 0) {
+                    div2 += "<div class='chitietkhuyenmai_row'><div class='chitietkhuyenmai_sp'><a href='chitiettour.html?matour=" + arr[i].ma_tour + "'><img class='chitietkhuyenmai_img' src='" + arr[i].images[1] + "'> <label class='chitietkhuyenmai_lbl--chitiet'>Xem Chi Tiết </label> </div>   <div class='chitietkhuyenmai_content'><h2 class='chitietkhuyenmai_text'>" + arr[i].ten_tour + "</h2></a><p>Mã tour: " + "<span>" + arr[i].ma_tour + "</span>" + "</p><p class='chitietkhuyenmai_thoigian'>Thời gian: " + arr[i].thoigian + "</p><p class='chitietkhuyenmai_diadiem'>Địa điểm khởi hành: " + arr[i].noikhoihanh + "</p><div class='chitietkhuyenmai_gia'>" + formatNumber(z) + "<span>đ</span></div><div class='chitietkhuyenmai_giacu'>" + formatNumber(arr[i].giatiennguoilon) + "<span>đ</span></div><a href='thongtin.html?matour=" + arr[i].ma_tour + "'><input onclick='goThongtin(" + '"' + arr[i].ma_tour + '"' + ")'  type='button' class='chitietkhuyenmai_imagecard' value='Đặt ngay'></a><img class='chitietphuongtien_item1' src='./asset/images/ICON/bus.png' alt='bus'><img class='chitietphuongtien_item2' src='./asset/images/ICON/plane.png' alt='plane'><div class='chitietkhuyenmai_percent'><img class='chitietkhuyenmai_percent--tag' src='./asset/images/ICON/tag.png'><div class='chitietkhuyenmai_percent--text' >-<span>" + arr[i].giamgia + "</span><span>%</span></div></div><input type='button' class='chitietkhuyenmai_button_yeuthich' value='Thêm vào yêu thích' onclick='themyeuthich_km(this)' ></div></div>"
+                }
+            }
+            div1 += "</div>";
+            div2 += "</div>";
+            document.getElementById("chitietkhuyenmai_category_trongnuoc").innerHTML = div1;
+            document.getElementById("chitietkhuyenmai_category_nuocngoai").innerHTML = div2;
+        }
+        w3.includeHTML();
+    </script>
+    <!--Search-->
+    <script src="./asset/javascrip/search.js"></script>
+    <!--  backtop2 -->
+    <div id="backtop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!--   Thêm vào yêu thích từ khuyến mãi -->
+    <script src="./asset/javascrip/yeuthich.js"></script>
+    <script>
+        // var yeuthich = new Array();
+        function themyeuthich_km(x) {
+            if (localStorage.getItem("User_login") === null) {
+                alert("Cần phải đăng nhập trước khi thêm vào Yêu Thích");
+                document.getElementById("modal__container").style.display = "flex";
+            } else {
+                //Lấy ID bằng click  -> DOM
+                var id = x.parentElement.children[1].children[0].innerText;
+                //alert(id);
+                var yt = new Array(id);
+                var title = x.parentElement.children[0].innerText; //Lấy title
+                for (var i = 0; i < yeuthich.length; i++) {
+                    if (yeuthich[i][0] == id) {
+                        return alert("Tour" + title + " đã có sẵn trong danh mục yêu thích");
+                    }
+                }
+                yeuthich.push(yt);
+                alert(title + " đã được thêm vào yêu thích");
+
+                //Lưu giỏ hàng
+                sessionStorage.setItem("yeuthich", JSON.stringify(yeuthich));
+            }
+
+        }
+    </script>
+</body>
+<!-- backtop3 -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+<script src="./asset/javascrip/backtop.js">
+</script>
+<script src="./asset/javascrip/search.js"></script>
+<script src="./asset/javascrip/dangnhap.js"></script>
+<script src="./asset/javascrip/onload_avar.js"></script>
+
+</html>

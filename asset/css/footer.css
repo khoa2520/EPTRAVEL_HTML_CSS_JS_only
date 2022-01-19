@@ -1,0 +1,30 @@
+.footer{
+    display: flex;
+    
+    
+    background-color:var(--footer_background-color);
+    float: bottom;
+    padding: 10px 20px 0 20px;
+    
+}
+.footer__flex--item{
+    flex:1;
+    margin-left: 20px;
+}
+.mxhlogo{
+    display: flex;
+}
+.mxhlogo > div:last-child{
+    margin-left: 20px;
+}
+@media screen  and (max-width: 800px) {
+    .footer{
+        flex-wrap: wrap;
+    }
+}
+.logo_cntt{
+    display: flex;
+}
+.logo_cntt img{
+    margin: 0 5px 10px 5px;
+}

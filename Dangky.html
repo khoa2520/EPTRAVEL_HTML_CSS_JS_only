@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPTRAVEL_Đăng ký</title>
+    <!-- Chèn font -->
+    <link rel="stylesheet" href="asset/css/font.css">
+    <link rel="stylesheet" href="asset/css/color.css">
+    <link rel="stylesheet" href="asset/css/text_style.css">
+    <link rel="stylesheet" href="asset/css/background.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <script src="asset/javascrip/header.js"></script>
+
+    <!-- Thư viện w3.js -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+
+    <!-- Link css -->
+    <link rel="stylesheet" href="./asset/css/dangky.css">
+
+    <!-- Favicon :  title off website -->
+    <link rel="shortcut icon" href="asset/favicon/titlelogo.png">
+    <!--  backtop1 -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="asset/css/backtop.css">
+</head>
+
+<body>
+    <div class="container">
+        <!--load header -->
+        <div w3-include-html="header.html"></div>
+
+
+        <div class="Dangky-content" style="margin-top: 10px;">
+            <div class="space">
+
+            </div>
+            <div class="frame">
+                <div style="text-align: center;"><img src="./asset/images/logo/logo.png" max-width="300px" alt="Error" class="logo"></div>
+                <h2>Đăng ký</h3>
+                    <p>Để hoàn tất đăng ký, khách hàng vui lòng điền đầy đủ thông tin và nhấn vào nút Đăng ký. Xin chân thành cảm ơn khách hàng</p>
+                    <form action="">
+                        <div class="form-row">
+                            <div class="form-row--left">
+                                <label for="hoten">Họ tên <span class="redstar">*</span></label>
+                                <input type="text" id="hoten">
+                            </div>
+                            <div class="form-row--right">
+                                <label for="gioitinh">Giới tính <span class="redstar">*</span></label>
+                                <!-- <input type="text" id="gioitinh"> -->
+                                <span class="gt">
+                                    <input type="radio" name="gtinh" id="nam"><span class="gtinh"><span>Nam</span></span>
+                                <input type="radio" name="gtinh" id="nu"><span class="gtinh">Nữ</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-row--left">
+                                <label for="ngaysinh">Ngày sinh<span class="redstar">*</span></label>
+                                <input type="date" id="ngaysinh">
+                            </div>
+                            <div class="form-row--right">
+                                <label for="didong">Di động<span class="redstar">*</span></label>
+                                <input type="text" id="didong">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-row--left">
+                                <label for="cmnd">CMND/CCCD</label>
+                                <input type="text" id="cmnd">
+                            </div>
+                            <div class="form-row--right">
+                                <label for="ngaycap">Ngày cấp</label>
+                                <input type="date" id="ngaycap">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-row--left">
+                                <label for="email">Email<span class="redstar">*</span></label>
+                                <input type="text" id="email">
+                            </div>
+                            <div class="form-row--right">
+                                <label for="diachi">Địa chỉ<span class="redstar">*</span></label>
+                                <input type="text" id="diachi">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-row--left">
+                                <label for="matkhauu">Mật khẩu<span class="redstar">*</span></label>
+                                <input type="text" id="matkhauu">
+                            </div>
+                            <div class="form-row--right">
+                                <label for="nl_matkhau">Nhập lại MK<span class="redstar">*</span></label>
+                                <input type="text" id="nl_matkhau">
+                            </div>
+                        </div>
+
+                    </form>
+                    <div class="line"></div>
+                    <div class="footer-dangky">
+                        <div class="ft-left">
+                            <span id="linktodn" onclick="document.getElementById('modal__container').style.display='flex';">Đăng
+                                nhập</span>
+                            <br>
+                            <br>
+                            <span style="color: rgb(75, 75, 75); font-size: 13px">Hoặc</span>
+                            <br>
+                            <br>
+                            <div class="dn-logo">
+                                <input type="button" value="" id="gg_link-icon">
+                                <input type="button" value="" id="fb_link-icon">
+                                <input type="button" value="" id="tw_link-icon">
+                            </div>
+                        </div>
+                        <div class="ft-center"></div>
+                        <div class="ft-right">
+                            <input onclick="dangky()" type="button" value="Đăng ký" id="btnDangky">
+                        </div>
+                    </div>
+            </div>
+
+        </div>
+
+        <!-- load footer -->
+        <div w3-include-html="footer.html"></div>
+
+        <!-- gọi thư viện -->
+        <script>
+            w3.includeHTML();
+        </script>
+
+        <script src="./asset/javascrip/dangky.js"></script>
+        <script src="./asset/javascrip/onload_avar.js"></script>
+
+    </div>
+
+    <!--  backtop2 -->
+    <div id="backtop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+</body>
+<!-- backtop3 -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="./asset/javascrip/backtop.js">
+</script>
+
+</html>

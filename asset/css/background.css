@@ -1,0 +1,29 @@
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #c4c4c4; 
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(85, 85, 85); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(44, 44, 44); 
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+    background-image: url(../images/main_background_den.png);
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+  }

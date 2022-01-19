@@ -1,0 +1,56 @@
+.heigh-top{
+    height: 130px;
+}
+button:hover{
+    cursor: pointer;
+}
+p, label, div{
+    font-family: text-regular;
+}
+h1, h3, h2{
+    font-family: Fester_Bold;
+}
+.tour-item__price--current__number{
+    font-size: larger;
+    margin: 10px;
+}
+#tour-item__price--current__number{
+    color: #ff0000;
+    font-weight: bold;
+}
+.btn{
+    padding: 5px;
+    width: max-content;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn-book{
+    background-color: #D74848;
+    color: white;
+    border: 0;
+}
+.btn-block, .btn-book,.yeuthich{
+    font-family: Fester_Bold;
+}
+.btn-book a{
+    color: white;
+}
+.btn-block{
+    background-color: white;
+    border: 1px solid black;
+    
+}
+#icon>img{
+    width: 12px;
+    height: 12px;
+    margin-right: 3px;
+}
+.yeuthich{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    margin-top: 10px;
+}
+a{
+    text-decoration:none;
+    color: black;
+}

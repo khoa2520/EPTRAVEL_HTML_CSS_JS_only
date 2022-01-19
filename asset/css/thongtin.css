@@ -1,0 +1,262 @@
+              html,
+              body {
+                  font-family: text-regular;
+              }
+              
+              .thongtin-content {
+                  height: 100%;
+                  width: 700px;
+                  margin: 0px auto;
+                  padding: 20px 40px;
+                  background-color: var( --item_background-color);
+                  border-radius: 10px;
+              }
+              
+              .thongtin-content__thongtintour {
+                  width: 100%;
+                  display: flex;
+                  margin-top: 20px;
+              }
+              
+              .thongtin-content__thongtintour--image img {
+                  width: 400px;
+              }
+              
+              .thongtin-content__thongtintour--noidung {
+                  width: 100%;
+                  margin-left: 15px;
+              }
+              
+              a {
+                  color: black;
+                  text-decoration: none;
+              }
+              
+              #thongtin-tieude {
+                  text-align: center;
+                  font-family: Fester_Bold;
+                  src: url(../font/Fester_Bold.otf);
+              }
+              
+              #thongtin-tieude__mobile {
+                  display: none;
+              }
+              
+              .text-divider {
+                  display: flex;
+                  align-items: center;
+                  --text-divider-gap: 1rem;
+              }
+              
+              .text-divider::before,
+              .text-divider::after {
+                  content: '';
+                  height: 1px;
+                  background-color: black;
+                  flex-grow: 1;
+              }
+              
+              .text-divider::before {
+                  margin-right: var(--text-divider-gap);
+              }
+              
+              .text-divider::after {
+                  margin-left: var(--text-divider-gap);
+              }
+              
+              .thongtin-content__thongtinlienlac {
+                  border: 1px solid black;
+                  border-top: none;
+                  margin-top: -31px;
+              }
+              
+              .form {
+                  display: flex;
+              }
+              
+              .form__row {
+                  display: flex;
+                  flex-direction: column;
+                  margin: 12px auto;
+              }
+              
+              input {
+                  width: 250px;
+                  height: 25px;
+                  border-radius: 5px;
+              }
+              
+              .form-hanhkhach {
+                  display: flex;
+              }
+              
+              .hanhkhach {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  width: 230px;
+                  margin-left: 45px;
+                  margin-bottom: 10px;
+                  margin-right: 40px;
+                  height: 35px;
+                  border: 1px solid black;
+                  border-radius: 10px;
+                  padding: 10px 15px;
+                  background-color: white;
+              }
+              
+              .hanhkhach__title {
+                  width: 100px;
+                  height: 20px;
+                  padding-top: 0%;
+                  margin-top: -20px;
+              }
+              
+              .hanhkhach__title>h4 {
+                  margin: 0%;
+              }
+              
+              .hanhkhach__title>p {
+                  margin: 0%;
+              }
+              
+              .tangsl,
+              .giamsl {
+                  position: relative;
+                  width: 25px;
+                  height: 25px;
+                  border-radius: 15px;
+                  background-color: #FFCC66;
+                  font-size: 25px;
+              }
+              
+              .tru {
+                  position: absolute;
+                  text-align: center;
+                  line-height: 25px;
+                  right: 7px;
+                  top: -2px;
+              }
+              
+              .cong {
+                  position: absolute;
+                  text-align: center;
+                  line-height: 25px;
+                  right: 3px;
+                  top: -1px;
+              }
+              
+              .sl {
+                  font-size: 25px;
+                  width: 29px;
+                  background-color: #fff;
+                  text-align: center;
+                  display: inline-block;
+                  vertical-align: top;
+                  border: none;
+                  margin-top: 5%;
+                  padding: 0;
+              }
+              
+              .button-trove,
+              .button-tieptheo {
+                  background-color: #5DA9DD;
+                  color: white;
+                  font-family: Fester_Bold;
+                  src: url(../font/Fester_Bold.otf);
+                  width: 130px;
+                  height: 40px;
+                  text-align: center;
+                  line-height: 40px;
+                  font-size: large;
+                  border-radius: 10px;
+                  border: none;
+                  border-right: 1px solid grey;
+                  border-bottom: 1px solid grey;
+                  margin-top: 20px;
+              }
+              
+              .button-tieptheo {
+                  float: right;
+              }
+              
+              .space {
+                  height: 40px;
+              }
+              
+              @media screen and (max-width:700px) {
+                  .thongtin-content {
+                      width: 85%;
+                      margin: 0px auto;
+                      padding: 10px 20px;
+                      background-color: var( --item_background-color);
+                      border-radius: 10px;
+                  }
+                  .thongtin-content__thongtintour--image {
+                      width: 100%;
+                      text-align: center;
+                  }
+                  .thongtin-content__thongtintour--image img {
+                      width: 100%;
+                  }
+                  .thongtin-content__thongtintour {
+                      flex-direction: column;
+                  }
+                  .thongtin-content__thongtinlienlac {
+                      border: 1px solid black;
+                      margin-top: 20px;
+                  }
+                  #thongtin-tieude {
+                      margin-left: 10px;
+                      text-align: left;
+                      font-family: Fester_Bold;
+                  }
+                  .form-hanhkhach {
+                      display: flex;
+                      flex-direction: column;
+                  }
+                  .text-divider {
+                      display: none;
+                  }
+                  .hanhkhach {
+                      width: 230px;
+                      margin: 0px auto;
+                      margin-bottom: 10px;
+                  }
+                  .form {
+                      flex-direction: column;
+                  }
+                  #thongtin-tieude__mobile {
+                      display: flex;
+                      margin-left: 10px;
+                      text-align: left;
+                      font-family: Fester_Bold;
+                  }
+                  .button-trove,
+                  .button-tieptheo {
+                      width: 90px;
+                      height: 30px;
+                      font-size: medium;
+                      text-align: center;
+                      line-height: 30px;
+                      border-radius: 5px;
+                  }
+                  .space {
+                      height: 20px;
+                  }
+              }
+              
+              @media screen and (max-width:480px) {
+                  .thongtin-content {
+                      width: 85%;
+                  }
+                  .button-trove,
+                  .button-tieptheo {
+                      width: 90px;
+                      height: 30px;
+                      font-size: medium;
+                      text-align: center;
+                      line-height: 30px;
+                      border-radius: 5px;
+                  }
+              }

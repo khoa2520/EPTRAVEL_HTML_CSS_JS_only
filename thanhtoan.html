@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPTRAVEL_THANHTOAN</title>
+    <!-- Chèn font -->
+    <link rel="stylesheet" href="asset/css/font.css">
+    <link rel="stylesheet" href="asset/css/color.css">
+    <link rel="stylesheet" href="asset/css/text_style.css">
+    <link rel="stylesheet" href="asset/css/background.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <script src="asset/javascrip/header.js"></script>
+    <script src="asset/javascrip/formatnumber.js"></script>
+    <!-- Favicon :  title off website -->
+    <link rel="shortcut icon" href="asset/favicon/titlelogo.png">
+    <!-- Thư viện w3.js -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="stylesheet" href="./asset/css/thanhtoan.css">
+    <!-- Link css -->
+    <!--  backtop1 -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="asset/css/backtop.css">
+    <script>
+        function getUrlParams() {
+            var params = {};
+            var queryString = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
+                params[key] = value;
+            });
+            return params;
+        }
+        var matour = unescape(getUrlParams().matour);
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <!--load header -->
+        <div w3-include-html="header.html"></div>
+        <div class="space"></div>
+        <div class="thanhtoan-content" style="margin-top: 80px;" id="id_thanhtoan_content">
+            <div class="thanhtoan-content__thongtintour" id="id_thanhtoan-content__thongtintour">
+                <div class="thanhtoan-content__thongtintour--image">
+                </div>
+                <div class="thanhtoan-content__thongtintour--noidung">
+                </div>
+            </div>
+            <div class="text-divider">
+                <h3 id="thanhtoan-tieude">Hành khách</h3>
+            </div>
+            <div class="thanhtoan-content__hanhkhach">
+                <h4 id="thanhtoan-tieude__mobile">Hành khách</h4>
+                <div id="thongtinhanhkhach">
+                    <div class="thanhtoan-content__hanhkhach--thongtin">
+                        <label class="loaihanhkhach nguoilon">Người lớn:</label>
+                        <div class="soluongxgia nguoilon">
+                            <span class="gia"></span>
+                            <span class="x">x</span>
+                            <span class="soluong"></span>
+                        </div>
+                    </div>
+                    <div class="thanhtoan-content__hanhkhach--thongtin">
+                        <label class="loaihanhkhach">Trẻ em:</label>
+                        <div class="soluongxgia">
+                            <span class="gia"></span>
+                            <span class="x">x</span>
+                            <span class="soluong"></span>
+                        </div>
+                    </div>
+                    <div class="thanhtoan-content__hanhkhach--thongtin">
+                        <label class="loaihanhkhach">Trẻ nhỏ:</label>
+                        <div class="soluongxgia">
+                            <span class="gia"></span>
+                            <span class="x">x</span>
+                            <span class="soluong"></span>
+                        </div>
+                    </div>
+                    <div class="thanhtoan-content__hanhkhach--thongtin">
+                        <label class="loaihanhkhach">Em bé:</label>
+                        <div class="soluongxgia">
+                            <span class="gia"></span>
+                            <span class="x">x</span>
+                            <span class="soluong"></span>
+                        </div>
+                    </div>
+                    <div class="thanhtoan-content__hanhkhach--thongtin">
+                        <label class="phuthu">Phụ thu phòng riêng:</label>
+                        <div class="giathuphong">
+                            <span class="gia"></span>
+                        </div>
+                    </div>
+                    <div class="thanhtoan-content__hanhkhach--thongtin">
+                        <label class="magiamgia">Mã giảm giá:</label>
+                        <div class="apdungmagiamgia">
+                            <input class="input-themma" type="text" placeholder="Thêm mã"></input>
+                            <button class="button-apdung">Áp dụng</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="hr"></div>
+                <div class="thanhtoantongcong">
+                    <h4 class="tongcong">Tổng cộng</h4>
+                    <span class="tongtien" id="tongcong"></span>
+                </div>
+
+                <div class="thanhtoan-content__hanhkhach--phuongthucthanhtoan">
+                    <label class="phuongthucthanhtoan">Phương thức thanh toán:</label>
+                    <div>
+                        <select class="chonphuongthuc" id="phuongthuc">
+                            <option value="" hidden>Chọn phương thức</option>
+                            <option value="thenganhang">Thẻ ngân hàng</option>
+                            <option value="momo">Momo</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="thanhtoan-content__button-datngay">
+                <button class="button-datngay" type="submit" onclick="openTttc()">Đặt ngay</button>
+            </div>
+
+        </div>
+        <div id="tttc-body">
+            <div class="dathangthanhcong" id="tttc">
+                <a style="margin-top:0px" href="index.html" class="closebtn">&times;</a>
+                <div class="dttc-img"><img src="./asset/images/ICON/check.png"></div>
+                <div class="dttc-text">
+                    <span style="text-align:center">Đặt tour thành công</span>
+                </div>
+            </div>
+        </div>
+        <div class="space"></div>
+        <!-- load footer -->
+        <div w3-include-html="footer.html"></div>
+        <!-- gọi thư viện -->
+        <script>
+            function openTttc() {
+                document.getElementById("tttc-body").style.width = "100%";
+            }
+
+            var xmlhttp = new XMLHttpRequest();
+            var url = "asset/data/tour.json";
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var myArr = JSON.parse(this.responseText);
+                    renderData(myArr);
+                }
+            }
+            xmlhttp.open("GET", url, true); //ra lệnh
+            xmlhttp.send();
+
+            function renderData(arr) {
+                var tt = sessionStorage.getItem("thongtin");
+                var thongtinKH = JSON.parse(tt);
+                var div = '';
+                var divTTKH = '';
+                var gia_NL = 0;
+                var gia_TE = 0;
+                var gia_TN = 0;
+                var gia_EB = 0;
+                var phuThu = 0;
+                var i;
+                for (i = 0; i < arr.length; i++) {
+                    if (arr[i].ma_tour == thongtinKH[0][0]) {
+                        {
+                            div += '<div class="thanhtoan-content__thongtintour--image"><img src="' + arr[i].images[1] + '" alt="Image"></div><div class="thanhtoan-content__thongtintour--noidung"><div><b><a>' + arr[i].ten_tour + '</a></b></div><br><div><label>Mã tour:</label>&nbsp<a>' + arr[i].ma_tour + '</a><br><br><label>Thời gian:</label>&nbsp<a>' + arr[i].thoigian + '</a><br><br><label>Nơi khởi hành:</label>&nbsp<a>' + arr[i].noikhoihanh + '</a> <br><br><label>Ngày khởi hành:</label>&nbsp<a>' + arr[i].ngaykhoihanh + '</a></div></div></div>'
+
+                            divTTKH = '<div class="thanhtoan-content__hanhkhach--thongtin"><label class="loaihanhkhach nguoilon">Người lớn:</label><div class="soluongxgia nguoilon"><span class="gia">' + formatNumber(arr[i].giatiennguoilon) + '</span><span class="x">x</span><span class="soluong">' + thongtinKH[0][5] + '</span></div></div><div class="thanhtoan-content__hanhkhach--thongtin"><label class="loaihanhkhach">Trẻ em:</label><div class="soluongxgia"><span class="gia">' + formatNumber(arr[i].giatientreem) + '</span><span class="x">x</span><span class="soluong">' + thongtinKH[0][6] + '</span></div></div><div class="thanhtoan-content__hanhkhach--thongtin"><label class="loaihanhkhach">Trẻ nhỏ:</label><div class="soluongxgia"><span class="gia">' + formatNumber(arr[i].giatientrenho) + '</span><span class="x">x</span><span class="soluong">' + thongtinKH[0][7] + '</span></div></div><div class="thanhtoan-content__hanhkhach--thongtin"><label class="loaihanhkhach">Em bé:</label><div class="soluongxgia"><span class="gia">' + formatNumber(arr[i].giatienembe) + '</span><span class="x">x</span><span class="soluong">' + thongtinKH[0][8] + '</span></div></div><div class="thanhtoan-content__hanhkhach--thongtin"><label class="phuthu">Phụ thu phòng riêng:</label><div class="giathuphong"><span class="gia">' + formatNumber(arr[i].phuthu) + '</span></div></div><div class="thanhtoan-content__hanhkhach--thongtin"><label class="magiamgia">Mã giảm giá:</label><div class="apdungmagiamgia"><input class="input-themma" type="text" placeholder="Thêm mã"></input><button class="button-apdung">Áp dụng</button></div></div>';
+                            gia_NL = arr[i].giatiennguoilon;
+                            gia_TE = arr[i].giatientreem;
+                            gia_TN = arr[i].giatientrenho;
+                            gia_EB = arr[i].giatienembe;
+                            phuThu = arr[i].phuthu;
+                            break;
+                        }
+                    }
+                }
+                document.getElementById("id_thanhtoan-content__thongtintour").innerHTML = div;
+                document.getElementById("thongtinhanhkhach").innerHTML = divTTKH;
+
+                var tongCong = gia_NL * thongtinKH[0][5] + gia_TE * thongtinKH[0][6] + gia_TN * thongtinKH[0][7] + gia_EB * thongtinKH[0][8] + parseInt(phuThu);
+                document.getElementById("tongcong").innerHTML = formatNumber(tongCong) + ' đ';
+            }
+            w3.includeHTML();
+        </script>
+         <script src="./asset/javascrip/dangnhap.js"></script>
+         <script src="./asset/javascrip/onload_avar.js"></script>
+    </div>
+    <!--  backtop2 -->
+    <div id="backtop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+</body>
+<!-- backtop3 -->
+<script src="./asset/javascrip/search.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="./asset/javascrip/backtop.js">
+</script>
+
+</html>

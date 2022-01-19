@@ -1,0 +1,314 @@
+    .lienhe-content {
+        width: 90%;
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+    
+    .lienhe--title {
+        background-color: var( --title_background-color);
+        border-radius: 10px;
+        /* overflow: hidden; */
+        height: 30px;
+        line-height: 36px;
+        text-align: center;
+        color: white;
+        font-family: Fester_Bold;
+        font-size: 20px;
+        margin: 20px 0;
+    }
+    
+    .lienhe--admin-box {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: justify;
+        justify-content: space-evenly;
+        width: 100%;
+        margin: 50px 0 10px 0;
+    }
+    
+    .lienhe--admin {
+        background-color: var( --item_background-color);
+        height: 250px;
+        width: 180px;
+        text-align: center;
+        border-radius: 10px;
+        margin: 10px;
+    }
+    
+    .lienhe--admin img {
+        width: 120px;
+        margin: 10px 0 5px 0;
+    }
+    
+    .lienhe--admin p {
+        font-family: text-regular;
+        font-size: 17px;
+        margin: 5px auto;
+    }
+    
+    .lienhe--admin:hover {
+        transform: scale(1.09);
+    }
+    
+    .lienhe--contact-box {
+        background-color: var( --item_background-color);
+        border-radius: 10px;
+        margin: 10px 0;
+        width: 100%;
+        padding: 20px 0;
+    }
+    
+    .lienhe__form-layout {
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .lienhe--item-left {
+        flex: 1;
+        text-align: left;
+        margin: 5px;
+    }
+    
+    .lienhe--item-right {
+        flex: 3;
+        text-align: left;
+        margin: 5px;
+    }
+    
+    .lienhe__label {
+        font-family: text-regular;
+        font-size: 20px;
+    }
+    
+    .lienhe__label span {
+        color: red;
+        margin-left: 5px;
+        font-size: 30px;
+    }
+    
+    .lienhe__input {
+        width: 100%;
+        height: 40px;
+        border-radius: 10px;
+        border: none;
+    }
+    
+    .lienhe__button-box {
+        text-align: right;
+        margin: 20px 10px;
+    }
+    
+    .lienhe__button {
+        font-family: Fester_Bold;
+        font-size: 20px;
+        width: 100px;
+        height: 40px;
+        background-color: var(--login-button);
+        border: none;
+        border-radius: 10px;
+        color: white;
+        line-height: 46px;
+        text-align: center;
+    }
+    
+    .lienhe__button:hover {
+        cursor: pointer;
+    }
+    /*Phần intro*/
+    
+    .lienhe--introduction {
+        display: block;
+        /*width: 100%;*/
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        background-color: rgb(255, 255, 255);
+        background-color: rgba(255, 255, 255, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+    
+    .lienhe--introduction .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+        width: 100px;
+        height: 100px;
+    }
+    
+    .lienhe--introduction a {
+        text-decoration: none;
+        color: #0C4A6D;
+    }
+    
+    .lienhe--introduction a:hover {
+        font-weight: bold;
+        color: blue;
+    }
+    
+    .drop-down {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        margin-left: 250px;
+        margin-right: 200px auto;
+        margin-top: 20px;
+    }
+    
+    .drop-down__button {
+        display: block;
+        width: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: transparent;
+        border: 0px;
+    }
+    
+    .drop-down__img {
+        width: 100%;
+        transform: rotate(-90deg);
+    }
+    
+    .drop-down__img:hover {
+        width: 100%;
+        transform: rotate(0deg);
+        transform: scale(1.5);
+        transition: 0.4s;
+    }
+    
+    .drop-down__content {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20px;
+    }
+    
+    .drop-down__content h1 {
+        font-family: Fester_Bold;
+        font-size: 32px;
+        margin-top: 20px;
+        color: #0C4A6D;
+    }
+    
+    .drop-down__content p {
+        font-family: text-regular;
+        font-size: 18px;
+        margin: 10px;
+    }
+    
+    .drop-down--content__img {
+        width: 300px;
+        border-radius: 80%;
+        height: 200px;
+    }
+    
+    @media only screen and (max-width: 750px) {
+        .lienhe--title {
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .lienhe--admin {
+            height: 180px;
+            width: 160px;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        .lienhe--admin img {
+            width: 83px;
+            margin: 5px 0;
+        }
+        .lienhe--admin p {
+            font-family: text-regular;
+            font-size: 15px;
+            margin: 5px auto;
+        }
+        .lienhe--contact-box {
+            border-radius: 5px;
+            padding: 10px 0;
+        }
+        .lienhe__form-layout {
+            width: 90%;
+        }
+        .lienhe--item-left {
+            flex: 1;
+            margin: 10px;
+        }
+        .lienhe--item-right {
+            flex: 4;
+        }
+        .lienhe__label {
+            font-size: 15px;
+        }
+        .lienhe__label span {
+            font-size: 20px;
+        }
+        .lienhe__input {
+            width: 100%;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+        }
+        .lienhe__button {
+            border-radius: 5px;
+        }
+        .drop-down {
+            margin-left: 0px;
+        }
+    }
+    
+    @media only screen and (max-width: 900px) {
+        .lienhe--title {
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .lienhe--admin {
+            height: 200px;
+            width: 180px;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        .lienhe--admin img {
+            width: 100px;
+            margin: 5px 0;
+        }
+        .lienhe--admin p {
+            font-family: text-regular;
+            font-size: 15px;
+            margin: 5px auto;
+        }
+        .lienhe--contact-box {
+            border-radius: 5px;
+            padding: 10px 0;
+        }
+        .lienhe__form-layout {
+            width: 90%;
+        }
+        .lienhe__label {
+            font-size: 17px;
+        }
+        .lienhe__label span {
+            font-size: 20px;
+        }
+        .lienhe__input {
+            width: 100%;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+        }
+        .lienhe__button {
+            border-radius: 5px;
+        }
+        .drop-down {
+            margin-left: 0px;
+        }
+        .lienhe--introduction .closebtn {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            position: static;
+        }
+    }

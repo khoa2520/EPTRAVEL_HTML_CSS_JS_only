@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPTRAVEL TOUR DU LỊCH</title>
+    <!-- Chèn font -->
+    <link rel="stylesheet" href="asset/css/font.css">
+    <link rel="stylesheet" href="asset/css/color.css">
+    <link rel="stylesheet" href="asset/css/text_style.css">
+    <link rel="stylesheet" href="asset/css/background.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <script src="asset/javascrip/header.js"></script>
+    <script src="asset/javascrip/formatnumber.js"></script>
+    <script src="asset/javascrip/sort.js"></script>
+    <script src="asset/javascrip/tourdulich.js"></script>
+    <!-- Favicon :  title off website -->
+    <link rel="shortcut icon" href="asset/favicon/titlelogo.png">
+    <!-- Thư viện w3.js -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+
+    <!-- Link css -->
+    <link rel="stylesheet" href="asset/css/tourdulich.css">
+    <link rel="stylesheet" href="./asset/css/tour-thi.css">
+
+    <script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script>
+        function goThongTin(matour) {
+            window.location.href = "detail.html?matour=" + matour;
+        }
+
+        function utf8Decode(utf8String) {
+            if (typeof utf8String != "string")
+                throw new TypeError("parameter ‘utf8String’ is not a string");
+            // note: decode 3-byte chars first as decoded 2-byte strings could appear to be 3-byte char!
+            const unicodeString = utf8String
+                .replace(
+                    /[\u00e0-\u00ef][\u0080-\u00bf][\u0080-\u00bf]/g, // 3-byte chars
+                    function (c) {
+                        // (note parentheses for precedence)
+                        var cc =
+                            ((c.charCodeAt(0) & 0x0f) << 12) |
+                            ((c.charCodeAt(1) & 0x3f) << 6) |
+                            (c.charCodeAt(2) & 0x3f);
+                        return String.fromCharCode(cc);
+                    }
+                )
+                .replace(
+                    /[\u00c0-\u00df][\u0080-\u00bf]/g, // 2-byte chars
+                    function (c) {
+                        // (note parentheses for precedence)
+                        var cc =
+                            ((c.charCodeAt(0) & 0x1f) << 6) | (c.charCodeAt(1) & 0x3f);
+                        return String.fromCharCode(cc);
+                    }
+                );
+            return unicodeString;
+        }
+        function getUrlParams() {
+            var params = {};
+            var queryString = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                params[key] = value;
+            });
+            return params;
+        }
+
+        var quocgia = utf8Decode(unescape(getUrlParams().quocgia));
+        var khuvuc = utf8Decode(unescape(getUrlParams().khuvuc));
+
+        var id_sel = document.getElementById('quocgia');
+        window.onload = function testtttt() {
+
+            // Xử lý load user_inf
+            if (user.length == 1) {
+                document.getElementsByClassName("modal")[0].style.display = "none";
+                document.getElementById("user-icon").style.backgroundImage =
+                    "url(" + "'" + user[0][5] + "'" + ")";
+                document.getElementById("user-icon").style.backgroundPosition = "center";
+                document.getElementById("user-icon").style.backgroundSize = "45px";
+                document.getElementById("user-icon").style.borderRadius = "50px";
+                document.getElementById("user-icon").style.border = "1px solid white";
+                document.getElementById("user-icon").style.width = "36px";
+            }
+
+
+            // Xử lý hiển thị số tour yêu Thích
+            var yt_index = sessionStorage.getItem("yeuthich");
+            var yeuthich_index = JSON.parse(yt_index);
+            if (sessionStorage.getItem("yeuthich") === null || yeuthich_index.length == 0) {
+                // alert('ko có');
+                document.getElementById("yeuthich_index").style.display = "none";
+            } else {
+                // alert('co');
+                document.getElementById("yeuthich_index").style.display = "block";
+                document.getElementById("yeuthich_index").innerHTML = yeuthich_index.length;
+            }
+
+            if (localStorage.getItem("User_login") !== null) {
+                //mode Đăng xuất
+                var dangXuat_attri = 'document.getElementById("user-icon").style.backgroundImage = "' +
+                    "url('./asset/images/ICON/user.png')" +
+                    '";document.getElementById("user-icon").style.backgroundSize = "32px"; document.getElementById("user-icon").style.border = "none";document.getElementById("dangnhap__id").innerText = "Đăng Nhập";document.getElementById("modal__container").style.display="flex";document.getElementById("modal__container").style.display="flex";document.querySelector("#user-block").style.display = "none";localStorage.removeItem("User_login");document.getElementById("yeuthich_index").style.display="none"'
+
+                document.getElementById("dangnhap__id").innerText = "Đăng Xuất";
+                document.getElementById("dangnhap").setAttribute('onclick', dangXuat_attri)
+            }
+
+
+
+            if (quocgia == "Trong Nước") {
+                document.getElementById('op_trongnuoc').setAttribute("selected", "selected");
+                document.getElementById('title_dich_mien').innerHTML = 'Tour Trong nước'
+                locQuocGia()
+                if (khuvuc == "Miền Nam") {
+                    document.getElementById('khuvuc').options[1].setAttribute("selected", "selected");
+                    locKhuVuc()
+                }
+                if (khuvuc == "Miền Bắc") {
+                    document.getElementById('khuvuc').options[2].setAttribute("selected", "selected");
+                    locKhuVuc()
+                }
+                if (khuvuc == "Miền Trung") {
+                    document.getElementById('khuvuc').options[3].setAttribute("selected", "selected");
+                    locKhuVuc()
+                }
+            }
+            if (quocgia == "NgoaiNuoc") {
+                document.getElementById('op_ngoainuoc').setAttribute("selected", "selected");
+                document.getElementById('title_dich_mien').innerHTML = 'Tour Ngoài nước'
+                locQuocGia()
+                if (khuvuc == "ChauAu") {
+                    document.getElementById('khuvuc').options[4].setAttribute("selected", "selected");
+                    locKhuVuc()
+                }
+                if (khuvuc == "ChauA") {
+                    document.getElementById('khuvuc').options[5].setAttribute("selected", "selected");
+                    locKhuVuc()
+                }
+                if (khuvuc == "ChauMy") {
+                    document.getElementById('khuvuc').options[6].setAttribute("selected", "selected");
+                    locKhuVuc()
+                }
+            }
+
+        }
+
+
+    </script>
+
+    <!--  backtop1 -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="asset/css/backtop.css">
+</head>
+
+<body>
+    <div class="container">
+        <!--load header -->
+        <div w3-include-html="header.html"></div>
+        <div class="heigh-top"></div>
+
+        <div class="tourdulich-content" style="margin-top: 10px;">
+            <!-- Bỏ nội dung vô đây -->
+
+            <div class="home__tintuc-dulich--title">
+                <p id="title_dich_mien" class="home--title--item"> Tour du lịch </p>
+            </div>
+
+            <div class="locsanpham">
+
+                <div class="locsanpham-select" id="locSanPham">
+
+                </div>
+                <div class="locsanpham-right">
+                    <div class="sapxep-select">
+                        <select name="Sắp xếp" class="sapxep" id="sapxep-select" onchange="ascending()">
+                            <option value="sapxep">--Sắp xếp theo--</option>
+                            <option value="thap-cao">Theo giá thấp đến cao</option>
+                            <option value="cao-thap">Theo giá cao đến thấp</option>
+                            <option value="theogiamgia"> Giảm giá nhiều nhất</option>
+                        </select>
+                    </div>
+                    <div id="category">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- load footer -->
+        <div w3-include-html="footer.html"></div>
+
+        <!-- gọi thư viện -->
+
+        <script>
+
+
+            //Xử lý lọc
+
+            w3.includeHTML();
+        </script>
+        <!-- <script src="./asset/javascrip/onload_avar.js"></script> -->
+        <script src="asset/javascrip/tourdulich.js"></script>
+        <script src="asset/javascrip/yeuthich.js"></script>
+        <script src="./asset/javascrip/dangnhap.js"></script>
+        <script src="./asset/javascrip/search.js"></script>
+
+
+    </div>
+    <!--  backtop2 -->
+    <div id="backtop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+</body>
+<!-- backtop3 -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+<script src="./asset/javascrip/backtop.js">
+</script>
+<script>
+    var us = localStorage.getItem("User_login");
+    var user = JSON.parse(us);
+
+</script>
+
+</html>

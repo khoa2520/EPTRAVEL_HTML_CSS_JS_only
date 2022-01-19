@@ -1,0 +1,150 @@
+@keyframes growth{
+  from { 
+    transform: scale(var(--growth-from));
+  }
+  to{
+    transform: scale(var(--growth-to));
+  }
+}
+.modal {
+  position: fixed !important;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  animation: fadeIn linear 0.2s;
+}
+.modal__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal__body{
+  --growth-from: 0.6;
+  --growth-to: 1;
+  margin: 10vh auto;
+  width: 420px;
+  height: 600px;
+  background-color: rgb(255, 255, 255, 0.8);
+  animation: growth linear 0.2s;
+  border-radius: 5px;
+  z-index: 2;
+  box-shadow: 0px 1px 20px rgba(39, 39, 39,0.6);
+}
+.login {
+  text-align: center;
+  font-family: sans-serif;
+}
+#close{
+  color: rgb(1, 47, 87);
+  background-color: white;
+  border: 0.01px solid rgb(119, 119, 119);
+  margin: 3px;
+  box-shadow: 0px 1px 5px rgba(39, 39, 39,0.2);
+  border-radius:4px
+}
+#close:hover{
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 122, 122);
+  cursor: pointer;
+}
+.login>input{
+  float: right
+}
+.login h3{
+   margin-block-start: 0; 
+   margin-top: -20px;
+}
+.login form{
+  
+  padding: 15px 50px;
+}
+#taikhoan,#matkhau, .lbl_login{
+  float: left;
+}
+.lbl_login{
+  margin-bottom: 5px;
+}
+#taikhoan,#matkhau{
+  width: 312px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 17px;
+}
+#linktoQuenmk, #linktoHelp{
+  float: right;
+}
+#linktoQuenmk, #linktoHelp, #linktoDangki{
+  color: var(--login-button);
+}
+#btnDangnhap{
+  background-color: var(--login-button);
+  border: none;
+  color: rgb(231, 231, 231);
+  width: 180px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 20px;
+  box-shadow: 0px 0px 10px rgba(39, 39, 39,0.2);
+}
+#btnDangnhap:hover{
+  background-color: #053c70;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 15px rgba(75, 0, 196, 0.5);
+}
+#gg_link-icon, #fb_link-icon, #tw_link-icon{
+  border: none;
+  margin: 0 15px;
+  width: 45px;
+  height: 45px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px rgba(39, 39, 39,0.1);
+}
+#gg_link-icon{
+  background-image: url(../images/ICON/GG.png);
+  background-size: 100%;
+}
+#fb_link-icon{
+  background-image: url(../images/ICON/FB.png);
+  background-size: 100%;
+}
+#tw_link-icon{
+  background-image: url(../images/ICON/TW.png);
+  background-size: 100%;
+}
+#gg_link-icon:hover, #fb_link-icon:hover, #tw_link-icon:hover{
+  margin: 1 16px;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(2, 53, 119, 0.3);
+}
+
+@media only screen and (max-height: 720px) {
+  .modal__body{
+   
+    margin: 5vh auto;
+    width: 420px;
+    height: 600px;
+  
+  }
+}
+@media only screen and (max-height: 690px) {
+  .modal__body{ 
+    margin: 2vh auto;
+  }
+}
+@media only screen and (max-height: 690px) {
+  .login h3{
+    margin-block-end: 0;
+  }
+  .modal__body{ 
+   height: 550px;
+   width: 380px;
+  }
+  .login form {
+    padding: 15px 30px;
+}
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPTRAVEL_YeuThich</title>
+    <!-- Chèn font -->
+    <link rel="stylesheet" href="asset/css/font.css">
+    <link rel="stylesheet" href="asset/css/color.css">
+    <link rel="stylesheet" href="asset/css/text_style.css">
+    <link rel="stylesheet" href="asset/css/background.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <script src="asset/javascrip/header.js"></script>
+
+    <!-- Thư viện w3.js -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <!-- FormatNumber -->
+    <script src="asset/javascrip/formatnumber.js"></script>
+
+    <!-- Link css -->
+    <link rel="stylesheet" href="asset/css/yeuthich.css">
+
+    <!-- Favicon :  title off website -->
+    <link rel="shortcut icon" href="asset/favicon/titlelogo.png">
+
+    <!--  backtop1 -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="asset/css/backtop.css">
+
+    <script>
+        function datNgay(matour) {
+            window.location.href = "detail.html?matour=" + matour;
+        }
+    </script>
+
+    <script src="./asset/javascrip/search.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!--load header -->
+        <div w3-include-html="header.html"></div>
+
+
+        <div class="yeuthich-content" style="margin-top: 0px;">
+
+            <div class="yeuthich__chucnang-header">
+                <div class="yeuthich-sapxep">
+                    <select onchange="ascending_yeuthich() " name="Sắp xếp" id="sapXepYeuThich"
+                        class="yeuthich-btnsapxep">
+                        <option value="sapxep">Sắp xếp theo</option>
+                        <option value="thap_cao">Theo giá thấp đến cao</option>
+                        <option value="cao_thap">Theo giá cao đến thấp</option>
+                        <option value="theogiamgia">Giảm giá nhiều nhất</option>
+                    </select>
+                </div>
+                <div class="yeuthich-timkiem">
+
+                    <input type="text" onkeyup="searchFunc_yeuthich()" class="yeuthich-btnsearch" name="search"
+                        id="menusearch" placeholder="Tìm kiếm theo tên tour">
+
+                </div>
+            </div>
+
+            <div class="" id="likelist"> </div>
+
+        </div>
+
+        <!-- load footer -->
+        <div w3-include-html="footer.html"></div>
+
+        <!-- gọi thư viện -->
+        <script>
+            var xmlhttp = new XMLHttpRequest();
+            var url = "asset/data/tour.json";
+
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var myArr = JSON.parse(this.responseText);
+                    threeFamous(myArr);
+
+                }
+            }
+
+            xmlhttp.open("GET", url, true); //ra lệnh
+            xmlhttp.send();
+
+
+            function showwww() {
+                var yt = sessionStorage.getItem("yeuthich");
+                var yeuthich = JSON.parse(yt);
+                alert(yeuthich)
+            }
+
+            function datNgay(id) {
+                window.location.href = 'thongtin.html?matour=' + id;
+            }
+
+            function goChiTiet(id) {
+                window.location.href = 'chitiettour.html?matour=' + id;
+            }
+
+
+            function threeFamous(arr) {
+                var i, j;
+                var div = '';
+                var yt = sessionStorage.getItem("yeuthich");
+                var yeuthich = JSON.parse(yt);
+
+                for (i = 0; i < arr.length; i++) {
+                    for (j = 0; j < yeuthich.length; j++) {
+                        if (yeuthich[j][0] == arr[i].ma_tour) {
+                            var close_del = '';
+                            var open_del = '';
+                            var giaSauKM = 0;
+                            var styleGia = '';
+                            var giaSauKM_element = '';
+                            if (arr[i].giamgia != 0) {
+                                open_del = "<del>"
+                                close_del = "</del>"
+                                giaSauKM = arr[i].giatiennguoilon * (100 - arr[i].giamgia) / 100;
+                                var giaSauKM_element = '<span>' + formatNumber(giaSauKM) + 'đ</span>';
+                            }
+                            else {
+                                styleGia = 'style="color: red"'
+                            }
+                            div += '<div class="yeuthich-tourbox"><div class="yeuthich-tour-img"><img src="' + arr[i].images[3] + '" alt="' + arr[i].ten_tour + '" onclick="goChiTiet(' + "'" + arr[i].ma_tour + "'" + ')" ></div><div class="yeuthich-tour-thongtin"><p id="yeuthich-tentour" onclick="goChiTiet(' + "'" + arr[i].ma_tour + "'" + ')" >' + arr[i].ten_tour + '</p><p id="yeuthich-chitiet-ma"><span id="yeuthich-chitiet-color">Mã tour: </span><span>' + arr[i].ma_tour + '</span></p><p id="yeuthich-chitiet-thoigian"><span id="yeuthich-chitiet-color">Thời gian: </span>' + arr[i].thoigian + '</p><p id="yeuthich-chitiet-noikh"><span id="yeuthich-chitiet-color"> Nơi khởi hành: </span>' + arr[i].noikhoihanh + '</p><p id="yeuthich-chitiet-ngay"> <span id="yeuthich-chitiet-color">Ngày khởi hành: </span>' + arr[i].ngaykhoihanh + '</p> <p id="yeuthich-chitiet-gia" ' + styleGia + '>' + open_del + formatNumber(arr[i].giatiennguoilon) + 'đ' + close_del + '</p> <p id="yeuthich-chitiet-giamgia">' + giaSauKM_element + '</p> </div><div class="yeuthich-tour-button"><div class="yeuthich-phuongtien"><input type="image" src="./asset/images/ICON/bus.png" alt="bus" id="btnbus"><input type="image" src="./asset/images/ICON/plane.png" alt="plane" id="btnplane"></div><button class="yeuthich-datngay" id="btndatngay" onclick="datNgay(' + "'" + arr[i].ma_tour + "'" + ')" )><span><img src="./asset/images/ICON/cart.png" alt="cart"></span><span id="yeuthich-datngay-text">Đặt ngay</span></button><button class="yeuthich-xem" id="btnxem" onclick="goChiTiet(' + "'" + arr[i].ma_tour + "'" + ')" >Xem chi tiết</button><button class="yeuthich-xoaitem" onclick="xoayeuthich_store(this)" id="btnxoaitem">Xóa</button></div></div>';
+                            break;
+                        }
+                    }
+                }
+
+                document.getElementById("likelist").innerHTML = div;
+
+            }
+
+            w3.includeHTML();
+        </script>
+
+        <script src="./asset/javascrip/onload_avar.js"></script>
+        <script src="asset/javascrip/yeuthich.js"></script>
+    </div>
+    <!--Search-->
+    <script src="./asset/javascrip/search.js"></script>
+    <!--  backtop2 -->
+    <div id="backtop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+</body>
+
+<!-- backtop3 -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+<script src="./asset/javascrip/backtop.js">
+</script>
+
+</html>

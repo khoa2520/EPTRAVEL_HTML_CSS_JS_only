@@ -1,0 +1,164 @@
+.chitiettour-content{
+    margin: 0 6%;
+}
+.container-x1, .tour--detail, .row--lichtrinh{
+    background-color: var(--item_background-color);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+}
+.row--lichtrinh>h3{
+    text-align: center;
+    margin-top: 0;
+}
+.row--tour, .row--tour--img{
+    display: flex;
+    justify-content: space-between;
+}
+.short-rating{
+    display: flex;
+}
+.rating{
+    border-radius: 5px;
+    border: white;
+    background-color: red;
+    padding: 8px;
+    margin-right: 10px;
+}
+.rating>label{
+    color: white;
+}
+.row--tour__right, .overviewtour--content {
+    display: flex;
+}
+.tour-item__price--addcart{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+.btn-book, .btn-block{
+    transform: scale(1.1);
+}
+.btn:hover, label:hover{
+    cursor: pointer;
+}
+.tour--img__first{
+    flex: 1.5;
+    height: 400px;
+    margin-right: 10px;
+}
+.tour--img__last{
+    flex: 1;
+    height: 400px;
+}
+.tour--img{
+    display: flex;
+    height: 48.7%;
+}
+.img{
+    flex: 1;
+}
+#img-tour{
+    width: 100%;
+    height: 100%;
+}
+.motatour--content{
+    padding: 10px 0;
+}
+.box-order{
+    flex: 1.8;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+.calendar-box{
+    background-color: rgb(107, 107, 245);
+    width: fit-content;
+    padding: 5px;
+    margin: 12px;
+    border-radius: 5px;
+}
+.calendar-box>label>a{
+    color: white;
+}
+.box-diemthamquan{
+    flex: 1;
+    padding-right: 10px;
+}
+.row--tour img{
+    border-radius: 5px;
+}
+@media screen and (max-width:1200px){
+    .row--tour--img{
+        display: flex;
+        flex-direction: column;
+    }
+    .tour--img__last{
+        margin: 10px 0;
+    }
+    .tour--img__first{
+        margin: 0;
+    }
+  @media screen and (max-width:1000px){
+    .locsanpham{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .locsanpham-select{
+        display: flex;
+        justify-content: space-around;
+        margin-top:0;
+  
+    }
+    
+    .select-item{
+        width: 90%;
+        height: 70%;
+    }
+  }
+  @media screen and (max-width:700px){
+    .sapxep-select{
+        text-align: center;
+    }
+    .locsanpham-select{
+       display: flex;
+       /* flex-direction: column; */
+        margin-top:0;
+  
+    }
+    .row--tour{
+        flex-direction: column;
+    }
+    .row--tour__right{
+        flex-direction: column;
+    }
+    .tour--img{
+        height: 50%;
+   }
+    .tour-item__price--current__number{
+    margin-right: 100%;  
+  }
+  .row--tour{
+      height: 100%;
+  }
+    .tour-item__price--addcart{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+  }
+  @media screen and (max-width:624px){
+    .overviewtour--content{
+        flex-direction: column;
+    }
+    .tour--img{
+        flex-direction: column;
+    }
+
+  }
+  @media screen and (max-width:480px){
+    
+  }
+  
+  
