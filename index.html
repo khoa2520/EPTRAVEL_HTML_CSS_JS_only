@@ -30,6 +30,9 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="stylesheet" href="asset/css/backtop.css">
 
+    <!-- loading Css-->
+    <link rel="stylesheet" href="./asset/css/loading.css">
+
 
 
 </head>
@@ -38,6 +41,19 @@
     <div class="container">
         <!--load header -->
         <div w3-include-html="header.html"></div>
+
+        <!-- Loading -->
+        <div class="loader">
+            <img src="./asset/images/ICON/animationLogo.gif" alt="Loading..." />
+            <img src="https://teamphotousa.com/assets/images/teamphoto-loading.gif" alt="Loading..." />
+        </div>
+        <script>
+            window.addEventListener("load", function () {
+                const loader = document.querySelector(".loader");
+                loader.className += " hidden"; // class "loader hidden"
+            });
+        </script>
+
 
 
         <div class="home-content" style="margin-top: 10px;">
@@ -149,7 +165,7 @@
                     <p>Các tour hot nhất hiện nay</p>
                 </div>
                 <div class="home__hot-tour--item" id="id_home__hot-tour--item">
-                    
+
                     <!-- Item giả -->
                     <!-- <div class="slider-item">
                         <div class="img"><img src="asset/images/IMAGE/img_temp_500x350.png" alt="Error"></div>
